@@ -1,0 +1,179 @@
+* {
+    color: #ddd;
+    padding: 0;
+    margin: 0;
+}
+
+ul > li {
+    list-style: circle;
+}
+
+.article {
+    text-align: justify;
+}
+
+section {
+    display: flex;
+    padding-inline: 10%;
+    margin-top: 100px;
+}
+
+img {
+    width: 100vw;
+}
+
+body {
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+    background: #222;
+    font-size: 1.15em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    color: lightblue;
+}
+
+#site-brand {
+    max-width: 40px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #333;
+    justify-content: space-between;
+    box-shadow: 0 2px black;
+    font-weight: 800;
+    padding-inline: 5%;
+    min-height: 10vh;
+}
+
+.navbar-title {
+    width: fit-content;
+    flex-shrink: 0;
+}
+
+.navbar-links {
+    width: fit-content;
+    flex-grow: 1;
+    text-align: end;
+}
+
+.navbar-links > a {
+    text-overflow: ellipsis;
+    margin-inline: 10px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: clip;
+    flex-basis: content;
+}
+
+.about-me {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-me h2 {
+    font-size: 72px;
+}
+
+.about-me > div:first-child {
+    width: 500px;
+}
+
+.about-me div * {
+    margin-block: 20px;
+}
+
+#navbar-divizor {
+    display: none;
+}
+
+#myself-top-img {
+    max-width: 367px;
+    max-height: 569px;
+    height: 10%;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.social-item {
+    width: 64px;
+    height: 64px;
+}
+
+.github {
+    background: url("../img/github.png") no-repeat center;
+}
+
+.vk {
+    background: url("../img/vk.png") no-repeat center;
+}
+
+.telegram {
+    background: url("../img/telegram.png") no-repeat center;
+}
+
+.email {
+    background: url("../img/email.png") no-repeat center;
+}
+
+@media (max-width: 1200px) {
+    #myself-top-img {
+        width: 100%;
+        align-self: center;
+        max-width: 367px;
+        max-height: 569px;
+        margin-left: 30px;
+        flex-shrink: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    #myself-top-img {
+        display: none;
+    }
+
+    .about-me div {
+        width: 100%;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar #site-brand {
+        display: none;
+    }
+
+    #navbar-divizor {
+        display: block;
+        width: 100%;
+        margin: 2px 0;
+    }
+
+    .navbar .navbar-title {
+        margin-block: 10px;
+    }
+
+    .navbar-links {
+        text-align: center;
+        /* border: 2px solid green; */
+    }
+}
+
+.small-text {
+    font-size: 0.75em;
+}
+
+.big-text {
+    font-size: 2em;
+}
