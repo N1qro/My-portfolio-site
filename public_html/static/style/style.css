@@ -142,6 +142,7 @@ body {
 }
 
 .project-item {
+    text-decoration: none;
     position: relative;
     overflow: hidden;
     display: flex;
