@@ -4,12 +4,8 @@
     margin: 0;
 }
 
-ul > li {
-    list-style: circle;
-}
-
-.article {
-    text-align: justify;
+html {
+    scroll-behavior: smooth;
 }
 
 section {
@@ -31,12 +27,20 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.title {
-    color: lightblue;
+.section-title {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 48px
 }
+
+/* Navbar */
 
 #site-brand {
     max-width: 40px;
+}
+
+#navbar-divizor {
+    display: none;
 }
 
 .navbar {
@@ -71,6 +75,14 @@ body {
     flex-basis: content;
 }
 
+/* Первая секция с краткой информацией обо мне (Лендинг)*/
+
+#myself-top-img {
+    max-width: 367px;
+    max-height: 569px;
+    height: 10%;
+}
+
 .about-me {
     flex-direction: row;
     justify-content: space-between;
@@ -86,68 +98,6 @@ body {
 
 .about-me div * {
     margin-block: 20px;
-}
-
-.projects {
-    display: block;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-rows: repeat(2, 250px);
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-    gap: 1rem;
-}
-
-.project-item {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #333;
-    box-shadow: 3px 5px wheat;
-    padding: 10px;
-}
-
-.project-title {
-    width: fit-content;
-    font-weight: bold;
-    font-size: 24px;
-    background-color: #222;
-    padding: 5px;
-}
-
-.project-item *[class^="project"] {
-    z-index: 1;
-}
-
-.transparent-bg {
-    position: absolute;
-    top: 0;
-    left: -10px;
-    object-fit: contain;
-    width: auto;
-    height: 100%;
-    opacity: 0.3;
-    transition: 0.5s;
-}
-
-
-.hover-reveal:hover {
-    opacity: 1;
-    z-index: 2;
-}
-
-#navbar-divizor {
-    display: none;
-}
-
-#myself-top-img {
-    max-width: 367px;
-    max-height: 569px;
-    height: 10%;
 }
 
 .socials {
@@ -177,6 +127,81 @@ body {
     background: url("../img/email.png") no-repeat center;
 }
 
+/* Вторая секция с проектами */
+
+.projects {
+    display: block;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 250px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 1rem;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    box-shadow: 3px 5px wheat;
+    padding: 10px;
+}
+
+.project-title {
+    width: fit-content;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: #222;
+    padding: 5px;
+}
+
+.project-item > *[class^="project"] {
+    z-index: 1;
+    text-shadow: 1px 1px blue;
+}
+
+.project-theme {
+    margin-top: auto;
+    font-size: small;
+}
+
+.transparent-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: auto 100%;
+    background-position: center;
+    opacity: 0.15;
+    transition: 0.75s;
+}
+
+.hover-reveal:hover {
+    opacity: 1;
+    z-index: 2;
+}
+
+.greenhouse-bg {
+    background-image: url("../img/greenhouse-bg.jpg");
+}
+
+.discord-bg {
+    background-image: url("../img/discord_bot_bg.png");
+    background-position: left;
+}
+
+.youtube-bg {
+    background-image: url("../img/youtube-bg.png");
+    background-position: left;
+}
+
+
 @media (max-width: 1200px) {
     #myself-top-img {
         width: 100%;
@@ -189,14 +214,8 @@ body {
 }
 
 @media (max-width: 700px) {
-    #myself-top-img {
-        display: none;
-    }
+    /* Navbar */
 
-    .about-me div {
-        width: 100%;
-    }
-    
     .navbar {
         flex-direction: column;
         justify-content: space-between;
@@ -218,14 +237,15 @@ body {
 
     .navbar-links {
         text-align: center;
-        /* border: 2px solid green; */
     }
-}
 
-.small-text {
-    font-size: 0.75em;
-}
+    /* Первая секция обо мне */
 
-.big-text {
-    font-size: 2em;
+    #myself-top-img {
+        display: none;
+    }
+
+    .about-me div {
+        width: 100%;
+    }
 }

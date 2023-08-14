@@ -17,16 +17,16 @@
     <header>
         <div class="navbar">
             <img src="static/img/hacker.png" id="site-brand">
-            <h2 class="navbar-title">N1qro the dev</h2>
+            <h2 class="navbar-title">andycodes.ru</h2>
             <hr id="navbar-divizor">
             <div class="navbar-links">
-                <a href="#">Обо мне</a>
-                <a href="#">Портфолио</a>
+                <a href="#about-me">Обо мне</a>
+                <a href="#projects">Портфолио</a>
                 <a href="#">Связаться со мной</a>
             </div>
         </div>
     </header>
-    <section class="about-me">
+    <section class="about-me" id="about-me">
         <div>
             <h2>Новиков Андрей</h2>
             <p>- Moscow, Russia</p>
@@ -41,26 +41,26 @@
         </div>
         <img src="static/img/me.png" alt="Andrey" id="myself-top-img">
     </section>
-    <section class="projects">
-        <h2>Мои проекты</h2>
+    <section class="projects" id="projects">
+        <h2 class="section-title">Мои проекты</h2>
         <div class="project-grid">
             <div class="project-item">
-                <img class="transparent-bg hover-reveal" src="static/img/greenhouse-bg.jpg">
+                <div class="transparent-bg greenhouse-bg hover-reveal"></div>
                 <p class="project-title">Greenhouse app</p>
-                <p class="project-description">
-                    Андроид приложение для удалённого управления теплицей.
-                <p class="project-theme">
-                    Созданно специально для предпроф олимпиады школьников. Используя Android Studio и язык Kotlin</p>
-                </p>
+                <p class="project-description">Андроид приложение для удалённого управления теплицей</p>
+                <p class="project-theme">Kotlin + Android Studio</p>
             </div>
             <div class="project-item">
-                <img class="transparent-bg hover-reveal" src="static/img/discord_bot_bg.png">
+                <div class="transparent-bg discord-bg hover-reveal"></div>
                 <p class="project-title">Twitch notification bot</p>
                 <p class="project-description">Дискорд бот, отправщяющий сообщения, когда кто-то из пользователей начинает стримить</p>
-                <p class="project-theme"></p>
+                <p class="project-theme">Python + Pycord + PostgreSQL</p>
             </div>
             <div class="project-item">
-
+                <div class="transparent-bg youtube-bg hover-reveal"></div>
+                <p class="project-title">YouTube video downloader</p>
+                <p class="project-description">Desktop программа для скачки видео с YouTube</p>
+                <p class="project-theme">Python + PyQt5 + PyTube</p>
             </div>
         </div>
     </section>
