@@ -14,10 +14,6 @@ section {
     margin-top: 100px;
 }
 
-img {
-    width: 100vw;
-}
-
 body {
     min-height: 300vh;
     display: flex;
@@ -109,6 +105,12 @@ body {
 .social-item {
     width: 64px;
     height: 64px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.social-item:hover {
+    box-shadow: 3px 5px gray;
 }
 
 .github {
@@ -125,6 +127,58 @@ body {
 
 .email {
     background: url("../img/email.png") no-repeat center;
+}
+
+/* Стэк с технологиями */
+
+.tech-stack {
+    padding-inline: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    gap: 1rem;
+}
+
+.tech-item {
+    position: relative;
+    padding: 1%;
+    transition: 0.5s;
+}
+
+.tech-item .description {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    top: 100%;
+    margin-top: 5%;
+    padding: 5px;
+    width: 250%;
+    background-color: #222;
+    transition: opacity 0.5s, visibility 0.5s, background-color 0.5s;
+}
+
+.tech-item img:first-child {
+    width: 64px;
+    height: 64px;
+}
+
+.tech-item:hover {
+    background-color: #333;
+}
+
+.tech-item:hover .description {
+    opacity: 1;
+    visibility: visible;
+    background-color: #333;
+}
+
+.gold-item:hover {
+    background-color: rgba(255, 215, 0, 0.25);
+}
+
+.gold-item:hover .description {
+    background-color: rgba(255, 215, 0, 0.25);
 }
 
 /* Вторая секция с проектами */
