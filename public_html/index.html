@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Мета-->
     <meta charset="UTF-8">
+    <meta name="description" content="Сайт-портфолио Python разработчика - Новикова Андрея">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новиков Андрей</title>
+
+    <!-- Шрифты-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon//apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/style/style.css">
-    <title>Новиков Андрей</title>
 </head>
 <body>
     <header>
@@ -19,52 +25,54 @@
             <img src="static/img/hacker.png" id="site-brand">
             <h2 class="navbar-title">andycodes.ru</h2>
             <hr id="navbar-divizor">
-            <div class="navbar-links">
+            <nav class="navbar-links">
                 <a href="#about-me">Обо мне</a>
                 <a href="#projects">Проекты</a>
                 <a href="#achievements">Участия</a>
                 <a href="#photos">Фотографии</a>
                 <a href="#contact-me">Связаться со мной</a>
-            </div>
+            </nav>
         </div>
     </header>
-    <section class="about-me" id="about-me">
-        <div>
-            <h2>Новиков Андрей</h2>
-            <p>- Moscow, Russia</p>
-            <p>Всем привет! Я участник олимпиад и хакатонов, а также большой любитель питона. Занимаюсь Frontend'ом, Backend'ом, разработкой ботов и Desktop приложений</p>
-            <hr>
-            <div class="socials">
-                <a href="https://github.com/N1qro" class="social-item github"></a>
-                <a href="https://vk.com/n1qro" class="social-item vk"></a>
-                <a href="https://t.me/n1qro" class="social-item telegram"></a>
-                <a href="mailto:andrey777-novikov777@yandex.ru" class="social-item email"></a>
+    <main>
+        <section class="about-me" id="about-me">
+            <div>
+                <h2>Новиков Андрей</h2>
+                <p>- Moscow, Russia</p>
+                <p>Всем привет! Я участник олимпиад и хакатонов, а также большой любитель питона. Занимаюсь Frontend'ом, Backend'ом, разработкой ботов и Desktop приложений</p>
+                <hr>
+                <div class="socials">
+                    <a href="https://github.com/N1qro" class="social-item github"></a>
+                    <a href="https://vk.com/n1qro" class="social-item vk"></a>
+                    <a href="https://t.me/n1qro" class="social-item telegram"></a>
+                    <a href="mailto:andrey777-novikov777@yandex.ru" class="social-item email"></a>
+                </div>
+            </div>
+            <img src="static/img/me.png" alt="Andrey" id="myself-top-img">
+        </section>
+        <div class="tech-stack"">
+            <div class="tech-item gold-item">
+                <img class="" src="static/svg/python.svg">
+                <p class="description">Самый мощный язык в моём стеке</p>
+            </div>
+            <div class="tech-item">
+                <img class="" src="static/svg/kotlin.svg">
+                <p class="description">Средний уровень</p>
+            </div>
+            <div class="tech-item">
+                <img class="" src="static/svg/html5.svg">
+                <p class="description">Высокий уровень</p>
+            </div>
+            <div class="tech-item">
+                <img class="" src="static/svg/css3.svg">
+                <p class="description">Высокий уровень</p>
+            </div>
+            <div class="tech-item">
+                <img class="" src="static/svg/js.svg">
+                <p class="description">Средний уровень. Учил исключительно для React</p>
             </div>
         </div>
-        <img src="static/img/me.png" alt="Andrey" id="myself-top-img">
-    </section>
-    <div class="tech-stack"">
-        <div class="tech-item gold-item">
-            <img class="" src="static/svg/python.svg">
-            <p class="description">Самый мощный язык в моём стеке</p>
-        </div>
-        <div class="tech-item">
-            <img class="" src="static/svg/kotlin.svg">
-            <p class="description">Средний уровень</p>
-        </div>
-        <div class="tech-item">
-            <img class="" src="static/svg/html5.svg">
-            <p class="description">Высокий уровень</p>
-        </div>
-        <div class="tech-item">
-            <img class="" src="static/svg/css3.svg">
-            <p class="description">Высокий уровень</p>
-        </div>
-        <div class="tech-item">
-            <img class="" src="static/svg/js.svg">
-            <p class="description">Средний уровень. Учил исключительно для React</p>
-        </div>
-    </div>
+    </main>
     <section class="projects" id="projects">
         <h2 class="section-title title-margin">Мои проекты</h2>
         <div class="project-grid">
