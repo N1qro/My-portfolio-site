@@ -1,0 +1,14 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card_wrapper {
+    max-width: 400px;
+}
+
+.fact_text {
+    flex-grow: 0;
+}

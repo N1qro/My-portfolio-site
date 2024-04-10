@@ -2,4 +2,21 @@
     width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
+    padding-inline: 0.5rem;
+}
+
+.section_me {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.align_vertically {
+    margin-block: auto;
+}
+
+@media (max-width: 700px) {
+    .section_me img {
+        display: none;
+    }
 }
