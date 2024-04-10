@@ -1,0 +1,16 @@
+.button {
+    background-color: #eee;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    border: none;
+    border-radius: 10px;
+}
+
+.button:hover {
+    filter: brightness(70%);
+}
+
+.thumbnail {
+    border-radius: 20px;
+}

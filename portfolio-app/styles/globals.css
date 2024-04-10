@@ -24,3 +24,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+.flex-column-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
