@@ -40,7 +40,9 @@ export default function Home() {
       </section>
       <section className={containerStyles.section_projects}>
         <h1 className="text-center">Мои проекты</h1>
-        {Projects.map(p => <ProjectCard key={p.id} {...p} />)}
+        <div className={containerStyles.project_container}>
+          {Projects.map(p => <ProjectCard key={p.id} {...p} />)}
+        </div>
       </section>
     </main>
   );

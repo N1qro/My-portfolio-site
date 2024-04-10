@@ -1,3 +1,11 @@
+import greenHouseBG from "@/assets/img/greenhouse-bg.jpg"
+import discordBotBG from "@/assets/img/discord_bot_bg.png"
+import youtubeBG from "@/assets/img/youtube-bg.png"
+import petpreneurBG from "@/assets/img/petpreneur.png"
+import shootingSeasBG from "@/assets/img/ShootingSeas.png"
+
+import { StaticImageData } from "next/image"
+
 export interface ProjectInfo {
   id: number,
   title: string,
@@ -5,7 +13,7 @@ export interface ProjectInfo {
   short_description: string,
   full_description: string,
   videoURL?: string,
-  previewImage: string,
+  previewImage: StaticImageData,
   creation_date: Date,
 }
 
@@ -17,7 +25,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Desktop приложение для установки видео с YouTube",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: youtubeBG,
     creation_date: new Date(),
   },
   {
@@ -27,7 +35,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Андроид приложение для удалённого управления теплицей",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: greenHouseBG,
     creation_date: new Date(),
   },
   {
@@ -37,7 +45,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Веб игра по принципу морского боя для розыгрыша призов",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: shootingSeasBG,
     creation_date: new Date(),
   },
   {
@@ -47,7 +55,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Сайт для объединения энтузиастов и единомышленников из разных сфер деятельности",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: petpreneurBG,
     creation_date: new Date(),
   },
   {
@@ -87,7 +95,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Дискорд бот, отправляющий сообщения, когда кто-то из пользователей начинает стримить",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: discordBotBG,
     creation_date: new Date(),
   },
 ]
