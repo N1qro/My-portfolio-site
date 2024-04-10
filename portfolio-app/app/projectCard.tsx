@@ -1,19 +1,13 @@
-interface ProjectProps {
-  id: number;
-  videoURI: string;
-  title: string;
-  description: string;
-  category: string;
-}
+import { ProjectInfo } from "@/lib/projects";
 
-export default function ProjectCard(props: ProjectProps) {
+export default function ProjectCard(props: ProjectInfo) {
   return (
     <article>
       <div>
-        <h2>Теплица</h2>
-        <p>Проект бла бла бла</p>
+        <h2>{props.title}</h2>
+        <p>{props.short_description}</p>
       </div>
-      <p>Kotlin + Android studio</p>
+      <p>{props.tags}</p>
     </article>
   );
 }

@@ -13,7 +13,8 @@
 
 html,
 body {
-  font-size: 1.1rem;
+  scroll-behavior: smooth;
+  font-size: clamp(0.9rem, 3.5vw, 1.1rem);
   color: #eee;
   max-width: 100vw;
   overflow-x: hidden;
@@ -26,7 +27,7 @@ a {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25em;
 }
 
 section {

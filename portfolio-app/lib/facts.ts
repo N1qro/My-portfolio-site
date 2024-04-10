@@ -1,6 +1,7 @@
 const facts = [
-  "lorem lorem loremloremlorem lorem lorem loremloremlorem lorem lorem loremloremlorem lorem lorem loremloremlorem",
-  "Fact 2",
+  "Написал свою первую строчку кода в 11 лет",
+  "Первый язык программирования - LuaU",
+  "Я инвестор-любитель. Вкладываю деньги в развитие компаний РФ",
 ]
 
 export default facts

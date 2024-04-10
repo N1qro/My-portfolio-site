@@ -1,19 +1,17 @@
 import FactCard from "./factCard";
-import Image from "next/image";
 import myself from "@/assets/img/me.png";
 import containerStyles from "@/styles/containers.module.css";
 import commonStyles from "@/styles/common.module.css";
 import ProjectCard from "./projectCard";
-
-const testProject = {
-  id: 1,
-  videoURI: "",
-  title: "",
-  description: "",
-  category: "",
-};
+import { cookies } from "next/headers";
+import styles from "@/styles/home.module.css"
+import Image from "next/image";
+import locationImage from "@/assets/svg/location2.svg"
+import Projects from "@/lib/projects";
 
 export default function Home() {
+  const savedFact = parseInt(cookies().get("latestFact")?.value || "0")
+
   return (
     <main>
       <section className={containerStyles.section_me}>
@@ -21,12 +19,16 @@ export default function Home() {
           className={`${containerStyles.align_vertically} flex-column-gap`}
         >
           <h1>Новиков Андрей</h1>
+          <div className={styles.location_wrapper}>
+            <Image src={locationImage} height={27} alt="location-logo" style={{color: "red"}} />
+            <i className={styles.location}>Москва, Россия</i>
+          </div>
           <p>
-            Backend + Frontend разработчик с большим опытом в серверной части,
-            также увлекаюсь созданием ботов в дискорде. Любитель олимпиад по
-            информатике, хакатонов и командной работы.
+            Веб разработчик, 18 лет. Увлекаюсь созданием ботов в дискорде.
+            Любитель олимпиад по информатике, хакатонов и командной работы.
+            На текущий момент стараюсь изо всех сил поступить в университет Иннополиса.
           </p>
-          <FactCard />
+          <FactCard savedFact={savedFact}/>
         </article>
         <Image
           className={commonStyles.thumbnail}
@@ -38,7 +40,7 @@ export default function Home() {
       </section>
       <section className={containerStyles.section_projects}>
         <h1 className="text-center">Мои проекты</h1>
-        <ProjectCard {...testProject} />
+        {Projects.map(p => <ProjectCard key={p.id} {...p} />)}
       </section>
     </main>
   );

@@ -16,7 +16,7 @@
 }
 
 @media (max-width: 700px) {
-    .section_me img {
+    .section_me>img {
         display: none;
     }
 }
