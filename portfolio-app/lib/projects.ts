@@ -2,7 +2,7 @@ import greenHouseBG from "@/assets/img/greenhouse-bg.jpg"
 import discordBotBG from "@/assets/img/discord_bot_bg.png"
 import youtubeBG from "@/assets/img/youtube-bg.png"
 import petpreneurBG from "@/assets/img/petpreneur.png"
-import shootingSeasBG from "@/assets/img/ShootingSeas.png"
+import shootingSeasBG from "@/assets/img/shootingSeas.png"
 import habitLifeBG from "@/assets/img/habitLife.png"
 import nftMarketOffenseBG from "@/assets/img/nftMarketOffense.png"
 
