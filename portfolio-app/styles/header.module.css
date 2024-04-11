@@ -1,0 +1,25 @@
+.header {
+    background-color: var(--dark-color-2);
+    padding: 20px 40px;
+}
+
+.header > :global(.container-root) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.header nav > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.header_title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
