@@ -3,6 +3,8 @@ import discordBotBG from "@/assets/img/discord_bot_bg.png"
 import youtubeBG from "@/assets/img/youtube-bg.png"
 import petpreneurBG from "@/assets/img/petpreneur.png"
 import shootingSeasBG from "@/assets/img/ShootingSeas.png"
+import habitLifeBG from "@/assets/img/habitLife.png"
+import nftMarketOffenseBG from "@/assets/img/nftMarketOffense.png"
 
 import { StaticImageData } from "next/image"
 
@@ -17,7 +19,7 @@ export interface ProjectInfo {
   creation_date: Date,
 }
 
-const Projects: ProjectInfo[] = [
+const projects: ProjectInfo[] = [
   {
     id: 1,
     title: "YouTube video downloader",
@@ -65,7 +67,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Трекер привычек с элементами геймификации",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: habitLifeBG,
     creation_date: new Date(),
   },
   {
@@ -75,7 +77,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Маркетплейс для создания и покупок NFT",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: nftMarketOffenseBG,
     creation_date: new Date(),
   },
   {
@@ -85,7 +87,7 @@ const Projects: ProjectInfo[] = [
     short_description: "Платформа для организации встреч с юр лицами",
     full_description: "",
     videoURL: "",
-    previewImage: "",
+    previewImage: nftMarketOffenseBG,
     creation_date: new Date(),
   },
   {
@@ -100,4 +102,4 @@ const Projects: ProjectInfo[] = [
   },
 ]
 
-export default Projects
+export default projects

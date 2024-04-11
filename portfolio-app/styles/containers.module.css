@@ -56,6 +56,14 @@
     border-radius: var(--border-radius);
 }
 
+.achievement_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-inline: auto;
+    align-items: center;
+}
+
 @media (max-width: 700px) {
     .section_me>img {
         display: none;

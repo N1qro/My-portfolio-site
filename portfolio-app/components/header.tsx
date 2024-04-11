@@ -16,19 +16,16 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <Link href="#proj">Обо мне</Link>
+              <a href="/#projects">Проекты</a>
             </li>
             <li>
-              <Link href="#proj">Проекты</Link>
+              <a href="/#achievements">Достижения</a>
             </li>
             <li>
-              <Link href="#proj">Участия</Link>
+              <a href="#proj">Фотографии</a>
             </li>
             <li>
-              <Link href="#proj">Фотографии</Link>
-            </li>
-            <li>
-              <Link href="#proj">Связаться со мной</Link>
+              <a href="#proj">Связаться со мной</a>
             </li>
           </ul>
         </nav>

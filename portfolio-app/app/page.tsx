@@ -7,7 +7,8 @@ import { cookies } from "next/headers";
 import styles from "@/styles/home.module.css"
 import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg"
-import Projects from "@/lib/projects";
+import projects from "@/lib/projects";
+import achievements from "@/lib/achievements";
 
 export default function Home() {
   const savedFact = parseInt(cookies().get("latestFact")?.value || "0")
@@ -38,11 +39,22 @@ export default function Home() {
           alt="thumbnail"
         />
       </section>
-      <section className={containerStyles.section_projects}>
-        <h1 className="text-center">Мои проекты</h1>
+      <section id="projects" className={containerStyles.section_projects}>
+        <h1>Мои проекты</h1>
         <div className={containerStyles.project_container}>
-          {Projects.map(p => <ProjectCard key={p.id} {...p} />)}
+          {projects.map(p => <ProjectCard key={p.id} {...p} />)}
         </div>
+      </section>
+      <section id="achievements">
+        <h1>Достижения</h1>
+        <ul className={containerStyles.achievement_container}>
+          {achievements.map((achivement, idx) => (
+            <li key={idx}>
+              {achivement.text}
+              {achivement.url && <a href={achivement.url}>🔗</a>}
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   );

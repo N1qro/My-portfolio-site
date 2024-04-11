@@ -1,11 +1,8 @@
 import { ProjectInfo } from "@/lib/projects";
 import containerStyles from "@/styles/containers.module.css"
-import Image from "next/image";
 import Link from "next/link";
 
 export default function ProjectCard(props: ProjectInfo) {
-  console.log(props.previewImage.src)
-
   return (
     <Link href={`/project/${props.id}`}>
       <article className={containerStyles.project_card}>
