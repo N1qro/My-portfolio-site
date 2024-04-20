@@ -25,6 +25,13 @@
   transform: translate(-50%, -50%);
 }
 
+.project_divider {
+  margin-block: 20px;
+  width: 50%;
+  height: 4px;
+  background-color: white;
+}
+
 .project_description {
   max-width: 640px;
 }

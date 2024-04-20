@@ -21,7 +21,7 @@ export interface ProjectInfo {
   id: number,
   title: string,
   madeFor?: string,          // Для чего делался проект
-  developmentCost: string,   // Длительность разработки
+  developmentCost?: string,   // Длительность разработки
   rating?: string,           // Баллы за проект
   gitLink?: string,
   tags: string[],
@@ -85,6 +85,9 @@ const projects: ProjectInfo[] = [
     short_description: "Сайт для объединения энтузиастов и единомышленников из разных сфер деятельности",
     full_description: "",
     videoURL: "",
+    gitLink: "",
+    madeFor: "",
+    developmentCost: "",
     previewImage: petpreneurBG,
     creation_date: new Date(),
   },
@@ -95,6 +98,8 @@ const projects: ProjectInfo[] = [
     short_description: "Трекер привычек с элементами геймификации",
     full_description: "",
     videoURL: "",
+    gitLink: "",
+    developmentCost: "",
     previewImage: habitLifeBG,
     creation_date: new Date(),
   },
@@ -105,6 +110,7 @@ const projects: ProjectInfo[] = [
     short_description: "Маркетплейс для создания и покупок NFT",
     full_description: "",
     videoURL: "",
+    gitLink: "",
     previewImage: nftMarketOffenseBG,
     creation_date: new Date(),
   },
@@ -119,7 +125,7 @@ const projects: ProjectInfo[] = [
     creation_date: new Date(),
   },
   {
-    id: 7,
+    id: 8,
     title: "Twitch notification bot",
     tags: [],
     short_description: "Дискорд бот, отправляющий сообщения, когда кто-то из пользователей начинает стримить",
