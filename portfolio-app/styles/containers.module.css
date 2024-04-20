@@ -64,6 +64,44 @@
     align-items: center;
 }
 
+.project_page_container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(min-content, 3fr) minmax(min-content, 2fr);
+}
+
+.project_page_container>* {
+    background-color: gray;
+}
+
+.tag_container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.tag_container>p {
+    padding: 2px 13px;
+    border-radius: 14px;
+    background-color: red;
+}
+
+.info_container {
+    display: flex;
+}
+
+.info_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #494949;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
 @media (max-width: 700px) {
     .section_me>img {
         display: none;

@@ -48,3 +48,7 @@ section>h1:first-child {
 .text-center {
   text-align: center;
 }
+
+.subtle-text {
+  color: #494949;
+}

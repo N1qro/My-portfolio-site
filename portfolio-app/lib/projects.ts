@@ -8,10 +8,22 @@ import nftMarketOffenseBG from "@/assets/img/nftMarketOffense.png"
 
 import { StaticImageData } from "next/image"
 
+interface Member {
+  firstName: string,
+  lastName: string,
+  position?: string,
+  redirectUrl?: string,
+  image?: string,
+}
+
 export interface ProjectInfo {
   id: number,
   title: string,
-  tags: string[]
+  madeFor?: string,          // Для чего делался проект
+  developmentCost: string,   // Длительность разработки
+  rating?: string,           // Баллы за проект
+  tags: string[],
+  members: Member[],
   short_description: string,
   full_description: string,
   videoURL?: string,
@@ -23,9 +35,12 @@ const projects: ProjectInfo[] = [
   {
     id: 1,
     title: "YouTube video downloader",
-    tags: [],
+    tags: ["Python", "Qt", "Pytube"],
     short_description: "Desktop приложение для установки видео с YouTube",
     full_description: "",
+    developmentCost: "4 месяца",
+    madeFor: "Проект Яндекс лицея",
+    rating: "98/100",
     videoURL: "",
     previewImage: youtubeBG,
     creation_date: new Date(),
@@ -33,9 +48,10 @@ const projects: ProjectInfo[] = [
   {
     id: 2,
     title: "Greenhouse App",
-    tags: [],
+    tags: ["Kotlin", "Android"],
     short_description: "Андроид приложение для удалённого управления теплицей",
     full_description: "",
+    developmentCost: "4 месяца",
     videoURL: "",
     previewImage: greenHouseBG,
     creation_date: new Date(),
@@ -43,7 +59,7 @@ const projects: ProjectInfo[] = [
   {
     id: 3,
     title: "Shooting Seas",
-    tags: [],
+    tags: ["React", "Django"],
     short_description: "Веб игра по принципу морского боя для розыгрыша призов",
     full_description: "",
     videoURL: "",
@@ -53,7 +69,7 @@ const projects: ProjectInfo[] = [
   {
     id: 4,
     title: "Petpreneur",
-    tags: [],
+    tags: ["Python", "Django"],
     short_description: "Сайт для объединения энтузиастов и единомышленников из разных сфер деятельности",
     full_description: "",
     videoURL: "",
