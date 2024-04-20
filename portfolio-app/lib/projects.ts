@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image"
+
+// Фоны карточек
 import greenHouseBG from "@/assets/img/greenhouse-bg.jpg"
 import discordBotBG from "@/assets/img/discord_bot_bg.png"
 import youtubeBG from "@/assets/img/youtube-bg.png"
@@ -5,8 +8,6 @@ import petpreneurBG from "@/assets/img/petpreneur.png"
 import shootingSeasBG from "@/assets/img/shootingSeas.png"
 import habitLifeBG from "@/assets/img/habitLife.png"
 import nftMarketOffenseBG from "@/assets/img/nftMarketOffense.png"
-
-import { StaticImageData } from "next/image"
 
 interface Member {
   firstName: string,
@@ -22,8 +23,9 @@ export interface ProjectInfo {
   madeFor?: string,          // Для чего делался проект
   developmentCost: string,   // Длительность разработки
   rating?: string,           // Баллы за проект
+  gitLink?: string,
   tags: string[],
-  members: Member[],
+  members?: Member[],
   short_description: string,
   full_description: string,
   videoURL?: string,
@@ -61,8 +63,18 @@ const projects: ProjectInfo[] = [
     title: "Shooting Seas",
     tags: ["React", "Django"],
     short_description: "Веб игра по принципу морского боя для розыгрыша призов",
-    full_description: "",
-    videoURL: "",
+    full_description: `
+      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    `,
+    videoURL: "shootingseas.mp4",
+    madeFor: "Московская предпроф олимпиада",
+    rating: "100/100",
+    gitLink: "https://fdsaf",
+    developmentCost: "2 месяца",
     previewImage: shootingSeasBG,
     creation_date: new Date(),
   },
