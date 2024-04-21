@@ -77,17 +77,20 @@ const projects: ProjectInfo[] = [
     tags: ["React", "Django"],
     short_description: "Веб игра по принципу морского боя для розыгрыша призов",
     full_description: `
-      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
-      lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+      Веб-игра морской бой "Shooting Seas". Регистрируйся на сайте, участвуй
+      в промоакции и получи шанс сыграть в морской бой с призами.
+      У тебя будет несколько выстрелов и одного поле. Если повезёт, то заберёшь приз
+      себе, если нет, то его получит кто-то другой.
+
+      Проект сделан в качестве маркетинговой кампании и содержит
+      в себе элементы геймификации для большей увлечённости пользователей.
+      Сайт делался в качестве отборочного тура Московской Предпроффесиональной Олимпиады
     `,
     videoURL: "shootingseas.mp4",
     madeFor: "Московская предпроф олимпиада",
     rating: "100/100",
-    gitLink: "https://fdsaf",
-    developmentCost: "2 месяца",
+    gitLink: "https://github.com/N1qro/sea-battle-with-gifts.git",
+    developmentCost: "1 месяц",
     previewImage: shootingSeasBG,
     creation_date: new Date(),
   },

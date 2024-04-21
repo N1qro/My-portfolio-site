@@ -72,7 +72,7 @@ export default function ProjectDisplay(props: PageProps) {
             <p>Временно отстутствуют. Скоро будут добавлены</p>
           </div>
           <div className="text-center">
-            <h2>Галлерея</h2>
+            <h2>Галерея</h2>
             <p>Временно пустая. Фотографии в процессе добавления</p>
           </div>
         </aside>
