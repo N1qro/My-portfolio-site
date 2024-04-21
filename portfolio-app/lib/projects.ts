@@ -39,13 +39,26 @@ const projects: ProjectInfo[] = [
     title: "YouTube video downloader",
     tags: ["Python", "Qt", "Pytube"],
     short_description: "Desktop приложение для установки видео с YouTube",
-    full_description: "",
-    developmentCost: "4 месяца",
+    full_description: `
+      Семейное приложение для установки и просмотра видео с YouTube.
+      Внутри есть возможность создать до 3 профилей, где у каждого будут
+      отображаться только свои видео. В приложении есть удобный интерфейс удаления
+      и запуска скачанных видео, можно скачать субтитры отдельно.
+      Также есть возможность передавать видео с компьютера
+      на телефон с помощью WiFi и QR-кода. Приложение было сделано в качестве самого первого
+      проекта в Яндекс Лицее, за который мы получили наивысший балл
+
+      * После изменения политики YouTube в отношение к подобному роду приложениям в 2023г,
+      оно стало скачивать стабильно только видео в формате 720p, в некоторых случаях
+      возможны и другие проблемы
+    `,
+    developmentCost: "36 дней",
     madeFor: "Проект Яндекс лицея",
-    rating: "98/100",
-    videoURL: "",
+    rating: "100/100",
+    gitLink: "https://github.com/mello-bit/YouTube-Video-Downloader",
+    videoURL: "ytdownloader.mp4",
     previewImage: youtubeBG,
-    creation_date: new Date(),
+    creation_date: new Date("2022-10-14"),
   },
   {
     id: 2,
