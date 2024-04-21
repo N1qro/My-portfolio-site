@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/header";
@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: "Новиков Андрей",
   description: "Сайт-портфолио 18 летнего Fullstack разработчика",
 };
+
+export const viewport: Viewport = {
+  initialScale: 0.75,
+}
 
 export default function RootLayout({
   children,
