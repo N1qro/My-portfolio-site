@@ -1,7 +1,7 @@
 .not_found_wrapper {
   position: relative;
-  width: 640px;
-  height: 360px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   box-shadow: inset 0px 0px 20px black;
 }
 
@@ -30,6 +30,11 @@
   width: 50%;
   height: 4px;
   background-color: white;
+}
+
+.video_player {
+  width: 100%;
+  height: auto;
 }
 
 .project_description {

@@ -10,7 +10,6 @@ export default function ProjectCard(props: ProjectInfo) {
           <h2>{props.title}</h2>
           <p>{props.short_description}</p>
         </div>
-        <p>{props.tags}</p>
         <div style={{ backgroundImage: `url(${props.previewImage.src})` }} className={containerStyles.project_image}></div>
       </article>
     </Link>

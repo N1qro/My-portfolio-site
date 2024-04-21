@@ -10,7 +10,7 @@ interface CardProps {
 
 export default function GithubCard({ src }: CardProps) {
   return (
-    <Link href={src} className={containerStyles.github_container}>
+    <Link href={src} target="_blank" className={containerStyles.github_container}>
       <Image height={40} src={githubImage} alt="github-logo"/>
       <h4>Посмотреть на GitHub</h4>
     </Link>
