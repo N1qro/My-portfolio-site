@@ -7,6 +7,7 @@ import { colorHash } from "@/lib/constraints"
 import GithubCard from "@/components/githubCard"
 import ProjectTags from "./projectTags"
 import VideoPlayer from "./videoPlayer"
+import LinkBack from "./linkBack"
 
 interface PageProps {
   params: {
@@ -26,8 +27,8 @@ export default function ProjectDisplay(props: PageProps) {
   const projectInformation = (
     <div className={containerStyles.info_container}>
       {project.developmentCost && <div className={containerStyles.info_circle}>
+        <p>Cрок:</p>
         <p>{project.developmentCost}</p>
-        <p>срок</p>
       </div>}
       {project.madeFor && <p className={containerStyles.info_circle}>{project.madeFor}</p>}
       {project.rating && <div className={containerStyles.info_circle}>
@@ -42,7 +43,7 @@ export default function ProjectDisplay(props: PageProps) {
 
   return (
     <main className={containerStyles.project_main}>
-      <Link href="..">{"<-"} Вернуться назад</Link>
+      <LinkBack>{"<-"} Вернуться назад</LinkBack>
       <div className={containerStyles.project_page_container}>
         <article>
           <h2>{project.title} <span className="subtle-text">({project.creation_date.getFullYear()})</span></h2>

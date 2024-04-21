@@ -135,6 +135,7 @@
 
 .info_circle:hover {
     font-size: 110%;
+    z-index: 2;
 }
 
 .github_container {

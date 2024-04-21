@@ -7,6 +7,8 @@
     border-radius: 10px;
 }
 
+.link_button {}
+
 .button:hover {
     filter: brightness(70%);
 }
