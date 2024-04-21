@@ -10,7 +10,11 @@ interface PlayerProps {
 export default function VideoPlayer({ width, height, preview, src }: PlayerProps) {
   if (src) {
     return (
-      <video width={width} height={height} poster={preview} controls>
+      <video
+        className={projectStyles.video_player}
+        poster={preview} 
+        controls
+      >
         <source src={`/${src}`} type="video/mp4" />
       </video>
     )
@@ -19,7 +23,7 @@ export default function VideoPlayer({ width, height, preview, src }: PlayerProps
   return (
     <div className={projectStyles.not_found_wrapper}>
       <div className={projectStyles.video_not_found} style={{backgroundImage: `url(${preview})`}} />
-      <h3>Видео временно не доступно</h3>
+      <h3>Видео временно недоступно</h3>
     </div>
   )
 }

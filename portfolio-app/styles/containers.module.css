@@ -64,6 +64,7 @@
 }
 
 .project_page_container {
+    justify-content: center;
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -72,12 +73,21 @@
 
 .project_page_container article {
     flex-shrink: 1;
+    max-width: 640px;
+    width: 100%;
 }
 
 .project_page_container aside {
     display: flex;
+    max-width: 420px;
     flex-direction: column;
     flex-grow: 1;
+    gap: 2rem;
+}
+
+.project_info {
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 }
 
@@ -124,6 +134,7 @@
 
 .info_circle:hover {
     font-size: 110%;
+    z-index: 2;
 }
 
 .github_container {
