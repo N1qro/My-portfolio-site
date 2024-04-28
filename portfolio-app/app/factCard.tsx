@@ -1,18 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import facts from "@/lib/facts";
 import styles from "@/styles/factCard.module.css";
 import { Button } from "@/components/button";
 import saveFact from "@/actions/saveFact";
 
 interface FactProps {
-  savedFact: number
+  savedFact: number;
 }
 
 export default function FactCard({ savedFact }: FactProps) {
   const [currentFact, setCurrentFact] = useState<number>(() => {
-    return Math.max(0, Math.min(facts.length - 1, savedFact))
+    return Math.max(0, Math.min(facts.length - 1, savedFact));
   });
 
   function incrementFactBy(amount: number) {
@@ -25,8 +25,8 @@ export default function FactCard({ savedFact }: FactProps) {
       newIndex = currentFact + amount;
     }
 
-    setCurrentFact(newIndex)
-    saveFact(newIndex)
+    setCurrentFact(newIndex);
+    saveFact(newIndex);
   }
 
   return (
