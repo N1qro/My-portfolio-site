@@ -16,16 +16,16 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <a href="/#projects">Проекты</a>
+              <Link href="/#projects" replace={true}>Проекты</Link>
             </li>
             <li>
-              <a href="/#achievements">Достижения</a>
+              <Link href="/#achievements" replace={true}>Достижения</Link>
             </li>
             <li>
-              <a href="#proj">Фотографии</a>
+              <Link href="/#pictures" replace={true}>Фотографии</Link>
             </li>
             <li>
-              <a href="#proj">Связаться со мной</a>
+              <Link href="/#contact-me" replace={true}>Связаться со мной</Link>
             </li>
           </ul>
         </nav>

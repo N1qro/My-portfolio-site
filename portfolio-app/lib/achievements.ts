@@ -53,6 +53,16 @@ const achievements: Achievement[] = [
     acquiredYear: 2024,
     url: "/docs/prod.pdf",
   },
+  {
+    text: "Финалист олимпиады Изумруд по математике",
+    acquiredYear: 2024,
+    url: "docs/izumr_math.pdf",
+  },
+  {
+    text: "Финалист олимпиады Изумруд по информатике",
+    acquiredYear: 2024,
+    url: "docs/izumr_inf.pdf",
+  },
 ]
 
 export default achievements

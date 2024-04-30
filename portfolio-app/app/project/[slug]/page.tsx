@@ -9,20 +9,20 @@ import LinkBack from "./linkBack";
 
 interface PageProps {
   params: {
-    id: string;
+    slug: string;
   };
   searchParams: {};
 }
 
 export function generateStaticParams() {
   return projects.map((proj) => ({
-    id: proj.id.toString(),
+    slug: proj.slug,
   }));
 }
 
 export default function ProjectDisplay(props: PageProps) {
   const project = projects.find(
-    (proj) => parseInt(props.params.id) === proj.id
+    (proj) => props.params.slug === proj.slug
   );
 
   if (!project) {

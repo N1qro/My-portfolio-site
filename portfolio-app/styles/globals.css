@@ -35,7 +35,7 @@ section {
   margin-top: 2.5rem;
 }
 
-section>h1:first-child {
+section.offset>h1:first-child {
   margin-bottom: 2rem;
   text-align: center;
 }

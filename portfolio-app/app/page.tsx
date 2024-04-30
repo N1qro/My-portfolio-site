@@ -39,13 +39,13 @@ export default function Home() {
           alt="thumbnail"
         />
       </section>
-      <section id="projects" className={containerStyles.section_projects}>
+      <section id="projects" className={`${containerStyles.section_projects} offset`}>
         <h1>Мои проекты</h1>
         <div className={containerStyles.project_container}>
           {projects.map(p => <ProjectCard key={p.id} {...p} />)}
         </div>
       </section>
-      <section id="achievements">
+      <section id="achievements" className="offset">
         <h1>Достижения</h1>
         <ul className={containerStyles.achievement_container}>
           {achievements.map((achivement, idx) => (
@@ -55,6 +55,14 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+      <section id="pictures">
+        <h1 className="text-center">Фотографии</h1>
+        <p className="text-center">Скоро появятся</p>
+      </section>
+      <section id="contact-me">
+        <h1 className="text-center">Связаться со мной</h1>
+        <p className="text-center">Форма скоро будет готова</p>
       </section>
     </main>
   );

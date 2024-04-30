@@ -30,6 +30,7 @@ export interface ProjectInfo {
   short_description: string,
   full_description: string,
   videoURL?: string,
+  slug: string,
   previewImage: StaticImageData,
   creation_date: Date,
 }
@@ -58,6 +59,7 @@ const projects: ProjectInfo[] = [
     rating: "100/100",
     gitLink: "https://github.com/mello-bit/YouTube-Video-Downloader",
     videoURL: "ytdownloader.mp4",
+    slug: "yt-downloader",
     previewImage: youtubeBG,
     creation_date: new Date("2022-10-14"),
   },
@@ -81,6 +83,7 @@ const projects: ProjectInfo[] = [
     rating: "95/100",
     madeFor: "Московская предпроф олимпиада",
     videoURL: "",
+    slug: "greenhouse",
     gitLink: "https://github.com/mello-bit/greenhouse-app",
     previewImage: greenHouseBG,
     creation_date: new Date("2023-03-19"),
@@ -101,6 +104,7 @@ const projects: ProjectInfo[] = [
       Сайт делался в качестве отборочного тура Московской Предпроффесиональной Олимпиады
     `,
     videoURL: "shootingseas.mp4",
+    slug: "shootingseas",
     madeFor: "Московская предпроф олимпиада",
     rating: "100/100",
     gitLink: "https://github.com/N1qro/sea-battle-with-gifts.git",
@@ -124,6 +128,7 @@ const projects: ProjectInfo[] = [
       всё сделано за вас. Быстро, автоматизировано и качественно. 
     `,
     videoURL: "",
+    slug: "petpreneur",
     gitLink: "https://github.com/N1qro/petpreneur",
     madeFor: "Специализация Яндекс Лицея",
     rating: "21/28",
@@ -146,6 +151,7 @@ const projects: ProjectInfo[] = [
       так и на телефон. Избегать хороших привычек стало ещё сложнее 😉
     `,
     videoURL: "",
+    slug: "habittracker",
     gitLink: "",
     developmentCost: "1 неделя",
     madeFor: "Олимпиада PROD",
@@ -169,6 +175,7 @@ const projects: ProjectInfo[] = [
       тренировкой REST api, проектирования путей для маршрутизатора и прочего.
     `,
     videoURL: "",
+    slug: "nftmarket",
     gitLink: "https://github.com/mello-bit/NFT-Market-Offense",
     madeFor: "Яндекс Лицей",
     rating: "86/100",
@@ -199,6 +206,7 @@ const projects: ProjectInfo[] = [
     madeFor: "Олимпиада PROD",
     gitLink: "https://github.com/N1qro/tinkoff-meets/",
     videoURL: "",
+    slug: "tinkoff_meets",
     previewImage: noPreviewBG,
     creation_date: new Date("2024-04-04"),
   },
@@ -220,6 +228,7 @@ const projects: ProjectInfo[] = [
     developmentCost: "1 месяц",
     gitLink: "https://github.com/N1qro/discord-twitch-notification-bot",
     videoURL: "",
+    slug: "twitch_discord_bot",
     previewImage: discordBotBG,
     creation_date: new Date("2023-06-30"),
   },
