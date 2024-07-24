@@ -4,14 +4,14 @@ import containerStyles from "@/styles/containers.module.css";
 import commonStyles from "@/styles/common.module.css";
 import ProjectCard from "./projectCard";
 import { cookies } from "next/headers";
-import styles from "@/styles/home.module.css"
+import styles from "@/styles/home.module.css";
 import Image from "next/image";
-import locationImage from "@/assets/svg/location2.svg"
+import locationImage from "@/assets/svg/location2.svg";
 import projects from "@/lib/projects";
 import achievements from "@/lib/achievements";
 
 export default function Home() {
-  const savedFact = parseInt(cookies().get("latestFact")?.value || "0")
+  const savedFact = parseInt(cookies().get("latestFact")?.value || "0");
 
   return (
     <main>
@@ -21,15 +21,20 @@ export default function Home() {
         >
           <h1>Новиков Андрей</h1>
           <div className={styles.location_wrapper}>
-            <Image src={locationImage} height={27} alt="location-logo" style={{color: "red"}} />
+            <Image
+              src={locationImage}
+              height={27}
+              alt="location-logo"
+              style={{ color: "red" }}
+            />
             <i className={styles.location}>Москва, Россия</i>
           </div>
           <p>
-            Веб разработчик, 18 лет. Увлекаюсь созданием ботов в дискорде.
-            Любитель олимпиад по информатике, хакатонов и командной работы.
-            На текущий момент стараюсь изо всех сил поступить в университет Иннополиса.
+            Веб разработчик, 18 лет. Абитуриент университета Иннополис,
+            победитель и призёр олимпиад, создатель ботов в Discord,
+            интересующийся предпренимательством
           </p>
-          <FactCard savedFact={savedFact}/>
+          <FactCard savedFact={savedFact} />
         </article>
         <Image
           className={commonStyles.thumbnail}
@@ -39,10 +44,15 @@ export default function Home() {
           alt="thumbnail"
         />
       </section>
-      <section id="projects" className={`${containerStyles.section_projects} offset`}>
+      <section
+        id="projects"
+        className={`${containerStyles.section_projects} offset`}
+      >
         <h1>Мои проекты</h1>
         <div className={containerStyles.project_container}>
-          {projects.map(p => <ProjectCard key={p.id} {...p} />)}
+          {projects.map((p) => (
+            <ProjectCard key={p.id} {...p} />
+          ))}
         </div>
       </section>
       <section id="achievements" className="offset">

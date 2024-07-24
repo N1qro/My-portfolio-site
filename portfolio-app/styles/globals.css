@@ -40,6 +40,10 @@ section.offset>h1:first-child {
   text-align: center;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .flex-column-gap {
   display: flex;
   flex-direction: column;
