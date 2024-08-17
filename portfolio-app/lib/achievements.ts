@@ -19,6 +19,16 @@ const achievements: Achievement[] = [
     url: "/docs/rosatom_win.pdf"
   },
   {
+    text: "Прошёл грантовый отбор в Университет Иннополис",
+    acquiredYear: 2024,
+    url: "/docs/iu_grant.pdf"
+  },
+  {
+    text: "Получил серебрянную медаль за окончание 11 класса",
+    acquiredYear: 2024,
+    url: "/docs/silver_medal.pdf"
+  },
+  {
     text: "Закончил курс \"Основы программирования на Python\" с рейтингом в 70+ баллов",
     acquiredYear: 2022,
     url: "/docs/yandex_1.pdf",
@@ -26,7 +36,7 @@ const achievements: Achievement[] = [
   {
     text: "Закончил курс \"Промышленное программирование на Python\" с рейтингом в 100+ баллов",
     acquiredYear: 2023,
-    url: "https://lms.yandex.ru/certificate/check/?certNumber=230242600&lastName=Новиков",
+    url: "/docs/yandex_2.pdf",
   },
   {
     text: "Закончил курс Advanced React для разработки Frontend приложений",
@@ -44,7 +54,7 @@ const achievements: Achievement[] = [
     url: predprofParticipate.src,
   },
   {
-    text: "Финалист хакатона \"STANKIN\Data Science. Большие данные\"",
+    text: "Финалист хакатона \"STANKIN\\Data Science. Большие данные\"",
     acquiredYear: 2022,
     url: "/docs/stankin.pdf"
   },
