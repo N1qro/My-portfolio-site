@@ -32,7 +32,7 @@ const achievements: Achievement[] = [
     text: "Закончил курс \"Основы программирования на Python\" с рейтингом в 70+ баллов",
     acquiredYear: 2022,
     url: "/docs/yandex_1.pdf",
-  },
+  }, 
   {
     text: "Закончил курс \"Промышленное программирование на Python\" с рейтингом в 100+ баллов",
     acquiredYear: 2023,
