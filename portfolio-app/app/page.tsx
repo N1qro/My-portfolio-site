@@ -9,6 +9,7 @@ import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg";
 import projects from "@/lib/projects";
 import achievements from "@/lib/achievements";
+import { contactEmail, currentLocation } from "@/lib/constraints";
 
 import picture1 from "@/assets/img/personal/photo_first.png"
 import picture2 from "@/assets/img/personal/photo_second.png"
@@ -40,7 +41,7 @@ export default function Home() {
               alt="location-logo"
               style={{ color: "red" }}
             />
-            <i className={styles.location}>Иннополис, Россия</i>
+            <i className={styles.location}>{currentLocation}</i>
           </div>
           <p>
             Веб разработчик, 18 лет. Студент университета Иннополис, победитель
@@ -105,7 +106,7 @@ export default function Home() {
       </section>
       <section id="contact-me">
         <h1 className="text-center">Связаться со мной</h1>
-        <p className="text-center">Форма скоро будет готова</p>
+        <p className="text-center">Можно отправить письмо на <a className={`${commonStyles.link} ${commonStyles.gradient}`} href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
       </section>
     </main>
   );

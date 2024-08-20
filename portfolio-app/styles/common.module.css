@@ -14,3 +14,14 @@
 .thumbnail {
     border-radius: 20px;
 }
+
+.link {
+    color: rgb(87, 87, 206);
+    /* text-decoration: underline;
+    text-underline-offset: 5px; */
+}
+
+.link.gradient {
+    background: linear-gradient(to right, red, blue);
+    background-clip: text;
+}

@@ -2,8 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/header";
-import RootContainer from "@/components/rootContainer";
 import { Analytics } from "@vercel/analytics/react"
+import Footer from "@/components/footer";
+import styles from "@/styles/containers.module.css"
 
 const inter = Manrope({ subsets: ["latin"] });
 
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body className={inter.className}>
         <Analytics mode={mode}/>
         <Header />
-        <RootContainer>{children}</RootContainer>
+        <div className={`${styles.root_container} mb-4`}>
+          {children}
+        </div>
+        <Footer/>
       </body>
     </html>
   );

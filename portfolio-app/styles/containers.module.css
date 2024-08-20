@@ -178,6 +178,13 @@
     border-radius: 10px 10px;
 }
 
+.footer {
+    user-select: none;
+    padding: 10px 20px;
+    margin-top: auto;
+    background-color: var(--dark-color-2);
+}
+
 @media (max-width: 700px) {
     .picture_column {
         max-width: calc(50% - 0.5rem * 3);
