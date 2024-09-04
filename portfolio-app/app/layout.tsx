@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import { Analytics } from "@vercel/analytics/react"
 import Footer from "@/components/footer";
 import styles from "@/styles/containers.module.css"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Manrope({ subsets: ["latin"] });
 
@@ -27,12 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Analytics mode={mode}/>
+        <Analytics mode={mode} />
+        <SpeedInsights debug={mode === "development"} />
         <Header />
         <div className={`${styles.root_container} mb-4`}>
           {children}
         </div>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
