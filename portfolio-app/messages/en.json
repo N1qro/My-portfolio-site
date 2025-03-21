@@ -31,7 +31,11 @@
     "participants_empty": "Temporarily unavailable. To be added soon",
     "gallery": "Gallery",
     "gallery_empty": "Temporarily empty. Photoes are being added",
-    "video_unavailable": "Video is temporarily unavailable"
+    "video_unavailable": "Video is temporarily unavailable",
+    "go_to_github": "Look on GitHub",
+    "description_empty": "No description specified",
+    "points": "points",
+    "time_window": "Duration"
   },
   "not_found": {
     "project_not_found": "Project not found",

@@ -4,7 +4,8 @@ import { siteTitle } from "@/lib/constraints";
 import styles from "@/styles/header.module.css";
 import RootContainer from "./rootContainer";
 import { useLocale, useTranslations } from "next-intl";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import LocaleSwitcher from "@/i18n/localeSwitcher";
 
 function Header() {
   const t = useTranslations()
@@ -33,7 +34,7 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <p><Link href={locale == "en" ?"/ru" : "/en"}>{locale}</Link></p>
+        <LocaleSwitcher/>
       </RootContainer>
     </header>
   );

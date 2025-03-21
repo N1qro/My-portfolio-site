@@ -31,7 +31,11 @@
     "participants_empty": "Временно отстутствуют. Скоро будут добавлены",
     "gallery": "Галерея",
     "gallery_empty": "Временно пустая. Фотографии в процессе добавления",
-    "video_unavailable": "Видео временно недоступно"
+    "video_unavailable": "Видео временно недоступно",
+    "go_to_github": "Посмотреть на GitHub",
+    "description_empty": "Описание не указано",
+    "points": "баллов",
+    "time_window": "Срок"
   },
   "not_found": {
     "project_not_found": "Проект не найден",

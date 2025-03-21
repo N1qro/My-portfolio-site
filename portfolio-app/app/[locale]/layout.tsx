@@ -41,11 +41,13 @@ export default async function RootLayout({
       <body className={inter.className}>
         <Analytics mode={mode} />
         <SpeedInsights debug={mode === "development"} />
-        <Header />
-        <div className={`${styles.root_container} mb-4`}>
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
-        </div>
-        <Footer />
+        <NextIntlClientProvider>
+          <Header />
+          <div className={`${styles.root_container} mb-4`}>
+            {children}
+          </div>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

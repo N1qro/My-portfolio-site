@@ -12,7 +12,7 @@
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.12",
     "color-hash": "^2.0.2",
-    "next": "14.1.4",
+    "next": "^14.2.25",
     "next-intl": "^4.0.2",
     "react": "^18",
     "react-dom": "^18"

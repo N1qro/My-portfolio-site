@@ -6,6 +6,7 @@ import GithubCard from "@/components/githubCard";
 import ProjectTags from "./projectTags";
 import VideoPlayer from "./videoPlayer";
 import LinkBack from "./linkBack";
+import { useTranslations } from "next-intl";
 
 interface PageProps {
   params: {
@@ -29,11 +30,13 @@ export default function ProjectDisplay(props: PageProps) {
     return notFound();
   }
 
+  const t = useTranslations("project_page")
+
   const projectInformation = (
     <div className={containerStyles.info_container}>
       {project.developmentCost && (
         <div className={containerStyles.info_circle}>
-          <p>Cрок:</p>
+          <p>{t("time_window")}:</p>
           <p>{project.developmentCost}</p>
         </div>
       )}
@@ -43,7 +46,7 @@ export default function ProjectDisplay(props: PageProps) {
       {project.rating && (
         <div className={containerStyles.info_circle}>
           <p>{project.rating}</p>
-          <p>баллов</p>
+          <p>{t("points")}</p>
         </div>
       )}
     </div>
@@ -57,7 +60,7 @@ export default function ProjectDisplay(props: PageProps) {
 
   return (
     <main className={containerStyles.project_main}>
-      <LinkBack>{"<-"} Вернуться назад</LinkBack>
+      <LinkBack>{"<-"} {t("return_back")}</LinkBack>
       <div className={containerStyles.project_page_container}>
         <article>
           <h2>
@@ -77,7 +80,7 @@ export default function ProjectDisplay(props: PageProps) {
           <div className={projectStyles.project_description}>
             {project.full_description.split("\n\n").map((text, idx) => (
               <div key={idx}>
-                <p>{text || "Описание не указано"}</p>
+                <p>{text || t("description_empty")}</p>
                 <br />
               </div>
             ))}
@@ -87,19 +90,19 @@ export default function ProjectDisplay(props: PageProps) {
           <div className={containerStyles.project_info}>
             {informationEnabled && (
               <>
-                <h2 className="text-center">Информация</h2>
+                <h2 className="text-center">{t("information")}</h2>
                 {projectInformation}
               </>
             )}
             {project.gitLink && <GithubCard src={project.gitLink} />}
           </div>
           <div className="text-center">
-            <h2>Участники</h2>
-            <p>Временно отстутствуют. Скоро будут добавлены</p>
+            <h2>{t("participants")}</h2>
+            <p>{t("participants_empty")}</p>
           </div>
           <div className="text-center">
-            <h2>Галерея</h2>
-            <p>Временно пустая. Фотографии в процессе добавления</p>
+            <h2>{t("gallery")}</h2>
+            <p>{t("gallery_empty")}</p>
           </div>
         </aside>
       </div>
