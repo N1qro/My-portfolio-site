@@ -5,12 +5,15 @@ import facts from "@/lib/facts";
 import styles from "@/styles/factCard.module.css";
 import { Button } from "@/components/button";
 import saveFact from "@/actions/saveFact";
+import { useTranslations } from "next-intl";
 
 interface FactProps {
   savedFact: number;
 }
 
 export default function FactCard({ savedFact }: FactProps) {
+  const t = useTranslations()
+
   const [currentFact, setCurrentFact] = useState<number>(() => {
     return Math.max(0, Math.min(facts.length - 1, savedFact));
   });
@@ -32,7 +35,7 @@ export default function FactCard({ savedFact }: FactProps) {
   return (
     <div className={styles.card_wrapper}>
       <h3 className="text-center">
-        Факт обо мне {currentFact + 1}/{facts.length}
+        {t("fact_card.fact_about_me")} {currentFact + 1}/{facts.length}
       </h3>
       <div className={styles.card}>
         <Button onClick={() => incrementFactBy(-1)}>{"<"}</Button>

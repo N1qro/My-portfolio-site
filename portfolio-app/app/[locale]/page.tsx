@@ -22,9 +22,11 @@ import picture8 from "@/assets/img/personal/photo_predprof1.jpg"
 import picture9 from "@/assets/img/personal/photo_prod1.jpg"
 import picture10 from "@/assets/img/personal/photo_prod2.jpg"
 import picture11 from "@/assets/img/personal/photo_prod3.jpg"
+import { useTranslations } from "next-intl";
 
 
 export default function Home() {
+  const t = useTranslations()
   const savedFact = parseInt(cookies().get("latestFact")?.value || "0");
 
   return (
@@ -33,7 +35,7 @@ export default function Home() {
         <article
           className={`${containerStyles.align_vertically} flex-column-gap`}
         >
-          <h1>Новиков Андрей</h1>
+          <h1>{t("author.fullname")}</h1>
           <div className={styles.location_wrapper}>
             <Image
               src={locationImage}
@@ -41,12 +43,10 @@ export default function Home() {
               alt="location-logo"
               style={{ color: "red" }}
             />
-            <i className={styles.location}>{currentLocation}</i>
+            <i className={styles.location}>{t("home.location")}</i>
           </div>
           <p>
-            Веб разработчик, 18 лет. Студент университета Иннополис, победитель
-            и призёр олимпиад, создатель ботов в Discord, интересующийся
-            предпренимательством
+            {t("home.description")}
           </p>
           <FactCard savedFact={savedFact} />
         </article>
@@ -62,7 +62,7 @@ export default function Home() {
         id="projects"
         className={`${containerStyles.section_projects} offset`}
       >
-        <h1>Мои проекты</h1>
+        <h1>{t("home.projects")}</h1>
         <div className={containerStyles.project_container}>
           {projects.map((p) => (
             <ProjectCard key={p.id} {...p} />
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </section>
       <section id="achievements" className="offset">
-        <h1>Достижения</h1>
+        <h1>{t("home.achievements")}</h1>
         <ul className={containerStyles.achievement_container}>
           {achievements.map((achivement, idx) => (
             <li key={idx}>
@@ -81,7 +81,7 @@ export default function Home() {
         </ul>
       </section>
       <section id="pictures" className="offset">
-        <h1 className="text-center">Фотографии</h1>
+        <h1 className="text-center">{t("home.pictures")}</h1>
         <div className={containerStyles.pictures_container}>
           <div className={containerStyles.picture_column}>
             <img src={picture1.src} alt="" />
@@ -105,8 +105,8 @@ export default function Home() {
         </div>
       </section>
       <section id="contact-me">
-        <h1 className="text-center">Связаться со мной</h1>
-        <p className="text-center">Можно отправить письмо на <a className={`${commonStyles.link} ${commonStyles.gradient}`} href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
+        <h1 className="text-center">{t("home.contact_me")}</h1>
+        <p className="text-center">{t("home.contact_description")} <a className={`${commonStyles.link} ${commonStyles.gradient}`} href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
       </section>
     </main>
   );

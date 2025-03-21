@@ -1,0 +1,42 @@
+{
+  "author": {
+    "fullname": "Novikov Andrei"
+  },
+  "header": {
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "pictures": "Pictures",
+    "contact_me": "Contact me"
+  },
+  "footer": {
+    "source_code": "Source code can be found on"
+  },
+  "home": {
+    "location": "Innopolis, Russia",
+    "description": "Web developer, 19 years. Student of Innopolis University, winner and prize-winner of Olympiads, creator of bots in Discord, interested in entrepreneurship",
+    "projects": "My projects",
+    "achievements": "Achievements",
+    "pictures": "Pictures",
+    "contact_me": "Contact me",
+    "contact_description": "Send a letter to"
+  },
+  "fact_card": {
+    "fact_about_me": "Fact about me",
+    "of": "of"
+  },
+  "project_page": {
+    "return_back": "Go back",
+    "information": "Information",
+    "participants": "Participants",
+    "participants_empty": "Temporarily unavailable. To be added soon",
+    "gallery": "Gallery",
+    "gallery_empty": "Temporarily empty. Photoes are being added",
+    "video_unavailable": "Video is temporarily unavailable"
+  },
+  "not_found": {
+    "project_not_found": "Project not found",
+    "view_options": "View options",
+    "how_did_you_get_here": "Oops, how did you get here?",
+    "go_home": "Return to reality"
+  }
+}
