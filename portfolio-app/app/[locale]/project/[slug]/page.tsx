@@ -1,4 +1,4 @@
-import projects from "@/lib/projects";
+import getProjects from "@/lib/projects";
 import { notFound } from "next/navigation";
 import containerStyles from "@/styles/containers.module.css";
 import projectStyles from "@/styles/projects.module.css";
@@ -16,27 +16,29 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return projects.map((proj) => ({
+  const noTranslation = (key: string) => key
+
+  return getProjects(noTranslation).map((proj) => ({
     slug: proj.slug,
   }));
 }
 
 export default function ProjectDisplay(props: PageProps) {
-  const project = projects.find(
+  const t = useTranslations()
+  const project = getProjects(t).find(
     (proj) => props.params.slug === proj.slug
   );
-
+  
   if (!project) {
     return notFound();
   }
 
-  const t = useTranslations("project_page")
 
   const projectInformation = (
     <div className={containerStyles.info_container}>
       {project.developmentCost && (
         <div className={containerStyles.info_circle}>
-          <p>{t("time_window")}:</p>
+          <p>{t("project_page.time_window")}:</p>
           <p>{project.developmentCost}</p>
         </div>
       )}
@@ -46,7 +48,7 @@ export default function ProjectDisplay(props: PageProps) {
       {project.rating && (
         <div className={containerStyles.info_circle}>
           <p>{project.rating}</p>
-          <p>{t("points")}</p>
+          <p>{t("project_page.points")}</p>
         </div>
       )}
     </div>
@@ -60,7 +62,7 @@ export default function ProjectDisplay(props: PageProps) {
 
   return (
     <main className={containerStyles.project_main}>
-      <LinkBack>{"<-"} {t("return_back")}</LinkBack>
+      <LinkBack>{"<-"} {t("project_page.return_back")}</LinkBack>
       <div className={containerStyles.project_page_container}>
         <article>
           <h2>
@@ -80,7 +82,7 @@ export default function ProjectDisplay(props: PageProps) {
           <div className={projectStyles.project_description}>
             {project.full_description.split("\n\n").map((text, idx) => (
               <div key={idx}>
-                <p>{text || t("description_empty")}</p>
+                <p>{text || t("project_page.description_empty")}</p>
                 <br />
               </div>
             ))}
@@ -90,19 +92,19 @@ export default function ProjectDisplay(props: PageProps) {
           <div className={containerStyles.project_info}>
             {informationEnabled && (
               <>
-                <h2 className="text-center">{t("information")}</h2>
+                <h2 className="text-center">{t("project_page.information")}</h2>
                 {projectInformation}
               </>
             )}
             {project.gitLink && <GithubCard src={project.gitLink} />}
           </div>
           <div className="text-center">
-            <h2>{t("participants")}</h2>
-            <p>{t("participants_empty")}</p>
+            <h2>{t("project_page.participants")}</h2>
+            <p>{t("project_page.participants_empty")}</p>
           </div>
           <div className="text-center">
-            <h2>{t("gallery")}</h2>
-            <p>{t("gallery_empty")}</p>
+            <h2>{t("project_page.gallery")}</h2>
+            <p>{t("project_page.gallery_empty")}</p>
           </div>
         </aside>
       </div>

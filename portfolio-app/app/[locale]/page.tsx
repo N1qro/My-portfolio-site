@@ -7,7 +7,7 @@ import { cookies } from "next/headers";
 import styles from "@/styles/home.module.css";
 import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg";
-import projects from "@/lib/projects";
+import getProjects from "@/lib/projects";
 import achievements from "@/lib/achievements";
 import { contactEmail, currentLocation } from "@/lib/constraints";
 
@@ -64,7 +64,7 @@ export default function Home() {
       >
         <h1>{t("home.projects")}</h1>
         <div className={containerStyles.project_container}>
-          {projects.map((p) => (
+          {getProjects(t).map((p) => (
             <ProjectCard key={p.id} {...p} />
           ))}
         </div>

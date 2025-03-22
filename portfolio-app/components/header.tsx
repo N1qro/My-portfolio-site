@@ -9,7 +9,6 @@ import LocaleSwitcher from "@/i18n/localeSwitcher";
 
 function Header() {
   const t = useTranslations()
-  const locale = useLocale();
     
   return (
     <header className={styles.header}>
