@@ -1,11 +1,17 @@
-const facts = [
-  "Написал свою первую строчку кода в 11 лет",
-  "Первый язык программирования - LuaU",
-  "Пробовал себя в Frontend, Backend, Devops",
-  "Я инвестор-любитель. Вкладываю деньги в развитие компаний РФ",
-  "Не любил веб разработку, пока не узнал о React",
-  "Мечта детства - создать игру в Roblox",
-  "Если можно было выбрать между технологичным и магическим миром, я бы выбрал последнее",
-]
+import { type useTranslations } from "next-intl"
 
-export default facts
+// Change this number accordingly to the corresponding number of
+// facts in the messages translation files
+const factNumber = 7
+
+const getFacts = (t: ReturnType<typeof useTranslations>): string[] => {
+  const facts = []
+
+  for (let i = 1; i <= factNumber; i++) {
+    facts.push(t(`personal_facts.fact_${i}`))
+  }
+
+  return facts
+}
+
+export default getFacts

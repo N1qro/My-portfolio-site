@@ -115,5 +115,14 @@
     "izumrud_math": "Finalist of Izumrud olympiad in mathematics",
     "izumrud_informatics": "Finalist of Izumrud olympiad in informatics",
     "yandex_django": "Finished Yandex specialization on web development with Django"
+  },
+  "personal_facts": {
+    "fact_1": "Wrote my first line of code at 11 years old",
+    "fact_2": "First programming language - LuaU",
+    "fact_3": "Tried myself in Frontend, Backend, and DevOps",
+    "fact_4": "I am an amateur investor. I invest money in the development of Russian companies",
+    "fact_5": "Did not like web development until I learned about React",
+    "fact_6": "Childhood dream - to create a game in Roblox",
+    "fact_7": "If I could choose between a technological and a magical world, I would choose the latter"
   }
 }

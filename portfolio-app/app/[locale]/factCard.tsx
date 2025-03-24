@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import facts from "@/lib/facts";
 import styles from "@/styles/factCard.module.css";
 import { Button } from "@/components/button";
 import saveFact from "@/actions/saveFact";
 import { useTranslations } from "next-intl";
+import getFacts from "@/lib/facts";
 
 interface FactProps {
   savedFact: number;
@@ -13,6 +13,7 @@ interface FactProps {
 
 export default function FactCard({ savedFact }: FactProps) {
   const t = useTranslations()
+  const facts = getFacts(t)
 
   const [currentFact, setCurrentFact] = useState<number>(() => {
     return Math.max(0, Math.min(facts.length - 1, savedFact));
