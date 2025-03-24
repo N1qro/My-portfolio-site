@@ -22,6 +22,10 @@ export const viewport: Viewport = {
   initialScale: 0.75,
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
+}
+
 export default async function RootLayout({
   children,
   params
