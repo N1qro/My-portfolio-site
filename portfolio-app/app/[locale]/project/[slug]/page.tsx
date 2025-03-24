@@ -1,4 +1,4 @@
-import projects from "@/lib/projects";
+import getProjects from "@/lib/projects";
 import { notFound } from "next/navigation";
 import containerStyles from "@/styles/containers.module.css";
 import projectStyles from "@/styles/projects.module.css";
@@ -6,6 +6,7 @@ import GithubCard from "@/components/githubCard";
 import ProjectTags from "./projectTags";
 import VideoPlayer from "./videoPlayer";
 import LinkBack from "./linkBack";
+import { useTranslations } from "next-intl";
 
 interface PageProps {
   params: {
@@ -15,25 +16,29 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return projects.map((proj) => ({
+  const noTranslation = (key: string) => key
+
+  return getProjects(noTranslation).map((proj) => ({
     slug: proj.slug,
   }));
 }
 
 export default function ProjectDisplay(props: PageProps) {
-  const project = projects.find(
+  const t = useTranslations()
+  const project = getProjects(t).find(
     (proj) => props.params.slug === proj.slug
   );
-
+  
   if (!project) {
     return notFound();
   }
+
 
   const projectInformation = (
     <div className={containerStyles.info_container}>
       {project.developmentCost && (
         <div className={containerStyles.info_circle}>
-          <p>Cрок:</p>
+          <p>{t("project_page.time_window")}:</p>
           <p>{project.developmentCost}</p>
         </div>
       )}
@@ -43,7 +48,7 @@ export default function ProjectDisplay(props: PageProps) {
       {project.rating && (
         <div className={containerStyles.info_circle}>
           <p>{project.rating}</p>
-          <p>баллов</p>
+          <p>{t("project_page.points")}</p>
         </div>
       )}
     </div>
@@ -57,7 +62,7 @@ export default function ProjectDisplay(props: PageProps) {
 
   return (
     <main className={containerStyles.project_main}>
-      <LinkBack>{"<-"} Вернуться назад</LinkBack>
+      <LinkBack>{"<-"} {t("project_page.return_back")}</LinkBack>
       <div className={containerStyles.project_page_container}>
         <article>
           <h2>
@@ -77,7 +82,7 @@ export default function ProjectDisplay(props: PageProps) {
           <div className={projectStyles.project_description}>
             {project.full_description.split("\n\n").map((text, idx) => (
               <div key={idx}>
-                <p>{text || "Описание не указано"}</p>
+                <p>{text || t("project_page.description_empty")}</p>
                 <br />
               </div>
             ))}
@@ -87,19 +92,19 @@ export default function ProjectDisplay(props: PageProps) {
           <div className={containerStyles.project_info}>
             {informationEnabled && (
               <>
-                <h2 className="text-center">Информация</h2>
+                <h2 className="text-center">{t("project_page.information")}</h2>
                 {projectInformation}
               </>
             )}
             {project.gitLink && <GithubCard src={project.gitLink} />}
           </div>
           <div className="text-center">
-            <h2>Участники</h2>
-            <p>Временно отстутствуют. Скоро будут добавлены</p>
+            <h2>{t("project_page.participants")}</h2>
+            <p>{t("project_page.participants_empty")}</p>
           </div>
           <div className="text-center">
-            <h2>Галерея</h2>
-            <p>Временно пустая. Фотографии в процессе добавления</p>
+            <h2>{t("project_page.gallery")}</h2>
+            <p>{t("project_page.gallery_empty")}</p>
           </div>
         </aside>
       </div>

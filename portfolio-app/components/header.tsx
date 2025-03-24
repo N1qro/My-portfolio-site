@@ -1,11 +1,15 @@
 import Image from "next/image";
 import siteLogo from "@/assets/img/hacker.png";
 import { siteTitle } from "@/lib/constraints";
-import Link from "next/link";
 import styles from "@/styles/header.module.css";
 import RootContainer from "./rootContainer";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import LocaleSwitcher from "@/i18n/localeSwitcher";
 
 function Header() {
+  const t = useTranslations()
+    
   return (
     <header className={styles.header}>
       <RootContainer>
@@ -16,19 +20,20 @@ function Header() {
         <nav>
           <ul>
             <li>
-              <Link href="/#projects" replace={true}>Проекты</Link>
+              <Link href="/#projects" replace={true}>{t("header.projects")}</Link>
             </li>
             <li>
-              <Link href="/#achievements" replace={true}>Достижения</Link>
+              <Link href="/#achievements" replace={true}>{t("header.achievements")}</Link>
             </li>
             <li>
-              <Link href="/#pictures" replace={true}>Фотографии</Link>
+              <Link href="/#pictures" replace={true}>{t("header.pictures")}</Link>
             </li>
             <li>
-              <Link href="/#contact-me" replace={true}>Связаться со мной</Link>
+              <Link href="/#contact-me" replace={true}>{t("header.contact_me")}</Link>
             </li>
           </ul>
         </nav>
+        <LocaleSwitcher/>
       </RootContainer>
     </header>
   );

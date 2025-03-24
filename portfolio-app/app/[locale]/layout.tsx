@@ -7,6 +7,10 @@ import Footer from "@/components/footer";
 import styles from "@/styles/containers.module.css"
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+import {NextIntlClientProvider, Locale, hasLocale} from 'next-intl';
+import {notFound} from 'next/navigation';
+import {routing} from '@/i18n/routing';
+
 const inter = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,23 +22,36 @@ export const viewport: Viewport = {
   initialScale: 0.75,
 }
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
+}
+
+export default async function RootLayout({
   children,
+  params
 }: {
   children: React.ReactNode;
+  params: Promise<{locale: string}>
 }) {
+  const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+  
   const mode = process.env.NODE_ENV === "production" ? "production" : "development"
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
         <Analytics mode={mode} />
         <SpeedInsights debug={mode === "development"} />
-        <Header />
-        <div className={`${styles.root_container} mb-4`}>
-          {children}
-        </div>
-        <Footer />
+        <NextIntlClientProvider>
+          <Header />
+          <div className={`${styles.root_container} mb-4`}>
+            {children}
+          </div>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

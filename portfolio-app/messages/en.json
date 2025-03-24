@@ -1,0 +1,128 @@
+{
+  "author": {
+    "fullname": "Novikov Andrei"
+  },
+  "header": {
+    "projects": "Projects",
+    "achievements": "Achievements",
+    "pictures": "Pictures",
+    "contact_me": "Contact me"
+  },
+  "footer": {
+    "source_code": "Source code can be found on"
+  },
+  "home": {
+    "location": "Innopolis, Russia",
+    "description": "Web developer, 19 years. Student of Innopolis University, winner and prize-winner of Olympiads, creator of bots in Discord, interested in entrepreneurship",
+    "projects": "My projects",
+    "achievements": "Achievements",
+    "pictures": "Pictures",
+    "contact_me": "Contact me",
+    "contact_description": "Send a letter to"
+  },
+  "fact_card": {
+    "fact_about_me": "Fact about me",
+    "of": "of"
+  },
+  "project_page": {
+    "return_back": "Go back",
+    "information": "Information",
+    "participants": "Participants",
+    "participants_empty": "Temporarily unavailable. To be added soon",
+    "gallery": "Gallery",
+    "gallery_empty": "Temporarily empty. Photoes are being added",
+    "video_unavailable": "Video is temporarily unavailable",
+    "go_to_github": "Look on GitHub",
+    "description_empty": "No description specified",
+    "points": "points",
+    "time_window": "Duration"
+  },
+  "not_found": {
+    "project_not_found": "Project not found",
+    "view_options": "View options",
+    "how_did_you_get_here": "Oops, how did you get here?",
+    "go_home": "Return to reality"
+  },
+  "projects": {
+    "youtube_downloader": {
+      "title": "YouTube video downloader",
+      "short_description": "Desktop application for installing YouTube videos",
+      "full_description": "A family app for installing and watching YouTube videos. Inside there is an option to create up to 3 profiles, where everyone will have only their own videos displayed. The app has a convenient interface for deleting and launching downloaded videos, you can download subtitles separately. It is also possible to transfer videos from your computer to your phone using WiFi and QR code. The application was made as the very first project in Yandex Lyceum, for which we received the highest score\n\n*After YouTube changed its policy towards this kind of applications in 2023, it started to download only 720p videos consistently, in some cases other problems are possible.",
+      "developmentCost": "36 days",
+      "madeFor": "Yandex Lyceum project"
+    },
+    "greenhouse_app": {
+      "title": "Greenhouse App",
+      "short_description": "Android application for remote greenhouse control",
+      "full_description": "Android app for remote control of greenhouse watering with the ability to automate it. Connects to greenhouses via API to receive sensory data and change furrow state\n\nThe app prohibits the user from turning the irrigation on/off when edge values are reached, so to avoid accidents, an emergency mode has been provided that transfers full control to the user\n\nThe project was developed for the qualifying stage of the Moscow pre-professional Olympiad",
+      "developmentCost": "2 months",
+      "madeFor": "Moscow Pre-professional Olympiad"
+    },
+    "shooting_seas": {
+      "title": "Shooting Seas",
+      "short_description": "Web game for prize giveaways",
+      "full_description": "Shooting Seas Battleship Web Game. Register on the site, participate in the promotion and get a chance to play a sea battle game with prizes. You'll have a few shots and one pitch. If you're lucky, you'll take the prize for yourself, if not, someone else will get it.\n\nThe project was made as a marketing campaign and contains elements of gamification for greater user enthusiasm. The site was made as a qualifying round of the Moscow Pre-Professional Olympics",
+      "developmentCost": "1 month",
+      "madeFor": "Moscow Pre-professional Olympiad"
+    },
+    "petpreneur": {
+      "title": "Petpreneur",
+      "short_description": "Platform to bring together enthusiasts and like-minded people from different fields of activity",
+      "full_description": "A platform to bring people from different fields together to work on collaborative projects or startups. If you are a web designer and you need developers to create your website or you on the contrary want to join somewhere, there is Petpreneur especially for you!\n\nFill out your resume, respond to other resumes and start working on your project as soon as possible. No more manual searches on forums or wk groups, everything is done for you here. Fast, automated and high quality",
+      "developmentCost": "20 days",
+      "madeFor": "Yandex Lyceum specialization"
+    },
+    "habit_tracker": {
+      "title": "HabitTracker",
+      "short_description": "Habit tracker with elements of gamification",
+      "full_description": "A web application for tracking good habits with gamification elements. You can add as many habits as you want, set the period of their fulfillment (daily/weekly/monthly) and for each of their fulfillment get experience and increase your level\n\nThe app is implemented as an adaptive PWA, so you can install it on both your computer and your phone. Avoiding good habits has become even harder 😉",
+      "developmentCost": "1 week",
+      "madeFor": "PROD Olympiad"
+    },
+    "nft_market_offense": {
+      "title": "NFT Market Offense",
+      "short_description": "Marketplace for creating and selling NFTs",
+      "full_description": "A platform for trading and creating NFT tokens. Right now you don't need to float your cryptocurrency balance to buy NFT, even if you set a price for the token, it's still free\n\nIt is possible to view the gallery in users. There is no filter on pictures\n\nThe project was made to get acquainted with the web as a development platform, to train REST api, to design paths for the router and other things",
+      "developmentCost": "18 days",
+      "madeFor": "Yandex Lyceum"
+    },
+    "tinkoff_meets": {
+      "title": "Tinkoff meets",
+      "short_description": "Platform for organizing meetings with legal entities",
+      "full_description": "As everyone knows, Tinkoff has no bank branches at all, so the only way to exchange documents or items with a client is through meetings. Meetings with legal entities are especially important, because there is a huge struggle for each individual entrepreneur or LLC because of their ability to bring in much more money than individuals\n\nOn this site, a legal entity will be able to make an appointment with a representative and see a list of all necessary documents in advance. The appointment is made in three steps, literally in 2 minutes, which practically guarantees the organization of a meeting at the client's request\n\nThe project is an integrated service, so the entrance to the site is possible only through an invitation link, which is unique for each client",
+      "developmentCost": "3 days",
+      "madeFor": "PROD Olympiad"
+    },
+    "twitch_notification_bot": {
+      "title": "Twitch notification bot",
+      "short_description": "Discord bot that notifies servers when certain streamers are online",
+      "full_description": "Discord bot implemented on new “slash” commands, with a nice and clear interface. Enables users to search and subscribe to their favorite Twitch streamers to be notified when their broadcasts start\n\nThe bot is ideal for streamers themselves, because by creating their own community in Discord and adding this bot there, they will be able to notify more users about the start of their stream and get more traffic from it",
+      "developmentCost": "1 month",
+      "madeFor": "Pet project"
+    }
+  },
+  "achievements": {
+    "moscow_predprof_2024": "Winner of Moscow Pre-professional Olympiad in the product \"IT\" sector 2024",
+    "moscow_predprof_2023": "Finalist of Moscow Pre-professional Olympiad in the product \"IT\" sector 2023",
+    "rosatom_2024": "2nd place winner of \"RosAtom\" informatics olympiad 2024",
+    "prod_2024": "Finalist and pioneer of PROD Olympiad in industrial programming from Tinkoff",
+    "yandex_lyceum_2023": "Finished course \"Industrial programming on Python\" with rating of 100+ points",
+    "yandex_lyceum_2022": "Finishes coure \"Basics of programming on Python\" with rating of 70+ points",
+    "silver_medal": "Received a silver medal for finishing 11th high-school grade",
+    "university_grant": "Passed grant selection to Innopolis University",
+    "react_course": "Finished \"Advanced React\" course for Frontend development",
+    "stankin_hackathon": "Finalist of \"STANKIN\\Data Science. Big data\" hackathon",
+    "izumrud_math": "Finalist of Izumrud olympiad in mathematics",
+    "izumrud_informatics": "Finalist of Izumrud olympiad in informatics",
+    "yandex_django": "Finished Yandex specialization on web development with Django"
+  },
+  "personal_facts": {
+    "fact_1": "Wrote my first line of code at 11 years old",
+    "fact_2": "First programming language - LuaU",
+    "fact_3": "Tried myself in Frontend, Backend, and DevOps",
+    "fact_4": "I am an amateur investor. I invest money in the development of Russian companies",
+    "fact_5": "Did not like web development until I learned about React",
+    "fact_6": "Childhood dream - to create a game in Roblox",
+    "fact_7": "If I could choose between a technological and a magical world, I would choose the latter"
+  }
+}
