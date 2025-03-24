@@ -8,7 +8,7 @@ import styles from "@/styles/home.module.css";
 import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg";
 import getProjects from "@/lib/projects";
-import achievements from "@/lib/achievements";
+import getAchievements from "@/lib/achievements";
 import { contactEmail, currentLocation } from "@/lib/constraints";
 
 import picture1 from "@/assets/img/personal/photo_first.png"
@@ -72,7 +72,7 @@ export default function Home() {
       <section id="achievements" className="offset">
         <h1>{t("home.achievements")}</h1>
         <ul className={containerStyles.achievement_container}>
-          {achievements.map((achivement, idx) => (
+          {getAchievements(t).map((achivement, idx) => (
             <li key={idx}>
               {achivement.text}
               {achivement.url && <a href={achivement.url}> 🔗</a>}

@@ -100,5 +100,20 @@
       "developmentCost": "1 month",
       "madeFor": "Pet project"
     }
+  },
+  "achievements": {
+    "moscow_predprof_2024": "Winner of Moscow Pre-professional Olympiad in the product \"IT\" sector 2024",
+    "moscow_predprof_2023": "Finalist of Moscow Pre-professional Olympiad in the product \"IT\" sector 2023",
+    "rosatom_2024": "2nd place winner of \"RosAtom\" informatics olympiad 2024",
+    "prod_2024": "Finalist and pioneer of PROD Olympiad in industrial programming from Tinkoff",
+    "yandex_lyceum_2023": "Finished course \"Industrial programming on Python\" with rating of 100+ points",
+    "yandex_lyceum_2022": "Finishes coure \"Basics of programming on Python\" with rating of 70+ points",
+    "silver_medal": "Received a silver medal for finishing 11th high-school grade",
+    "university_grant": "Passed grant selection to Innopolis University",
+    "react_course": "Finished \"Advanced React\" course for Frontend development",
+    "stankin_hackathon": "Finalist of \"STANKIN\\Data Science. Big data\" hackathon",
+    "izumrud_math": "Finalist of Izumrud olympiad in mathematics",
+    "izumrud_informatics": "Finalist of Izumrud olympiad in informatics",
+    "yandex_django": "Finished Yandex specialization on web development with Django"
   }
 }
