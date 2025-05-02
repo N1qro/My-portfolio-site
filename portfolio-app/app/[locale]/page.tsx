@@ -23,6 +23,8 @@ import picture9 from "@/assets/img/personal/photo_prod1.jpg"
 import picture10 from "@/assets/img/personal/photo_prod2.jpg"
 import picture11 from "@/assets/img/personal/photo_prod3.jpg"
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/button";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -48,6 +50,7 @@ export default function Home() {
           <p>
             {t("home.description")}
           </p>
+          <Link className={commonStyles.link_redirect} href="/resume.pdf">{t("home.resume")}</Link>
           <FactCard savedFact={savedFact} />
         </article>
         <Image

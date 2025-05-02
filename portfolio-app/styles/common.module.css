@@ -25,3 +25,14 @@
     background: linear-gradient(to right, red, blue);
     background-clip: text;
 }
+
+.link_redirect {
+    width: fit-content;
+    background-color: blue;
+    padding: 6px 15px;
+    border-radius: 10px;
+}
+
+.link_redirect:hover {
+    filter: brightness(75%);
+}
