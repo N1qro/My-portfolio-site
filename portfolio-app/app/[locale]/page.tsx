@@ -50,7 +50,7 @@ export default function Home() {
           <p>
             {t("home.description")}
           </p>
-          <Link className={commonStyles.link_redirect} href="/resume.pdf">{t("home.resume")}</Link>
+          <a className={commonStyles.link_redirect} href="/resume.pdf">{t("home.resume")}</a>
           <FactCard savedFact={savedFact} />
         </article>
         <Image
