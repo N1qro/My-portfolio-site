@@ -9,6 +9,7 @@ import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg";
 import getProjects from "@/lib/projects";
 import getAchievements from "@/lib/achievements";
+import Background from "./background";
 import { contactEmail, currentLocation } from "@/lib/constraints";
 
 import picture1 from "@/assets/img/personal/photo_first.png"
@@ -61,6 +62,7 @@ export default function Home() {
           alt="thumbnail"
         />
       </section>
+      <Background />
       <section
         id="projects"
         className={`${containerStyles.section_projects} offset`}

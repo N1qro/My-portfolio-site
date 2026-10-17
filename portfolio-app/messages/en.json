@@ -13,7 +13,7 @@
   },
   "home": {
     "location": "Innopolis, Russia",
-    "description": "Web developer, 19 years. Student of Innopolis University, winner and prize-winner of Olympiads, creator of bots in Discord, interested in entrepreneurship",
+    "description": "Web developer, 20 years. Student of Innopolis University, winner and prize-winner of Olympiads, creator of bots in Discord, interested in entrepreneurship",
     "projects": "My projects",
     "achievements": "Achievements",
     "pictures": "Pictures",
@@ -125,5 +125,35 @@
     "fact_5": "Did not like web development until I learned about React",
     "fact_6": "Childhood dream - to create a game in Roblox",
     "fact_7": "If I could choose between a technological and a magical world, I would choose the latter"
+  },
+  "education": {
+    "title": "Education",
+    "level": "Undergraduate · in progress",
+    "grade": "GPA",
+    "transcript": "Academic transcript",
+    "russia": "Russia",
+    "china": "China",
+    "innopolis": {
+      "title": "Innopolis University",
+      "description": "Computer Science · Information Systems Engineering",
+      "transcript": "Innopolis transcript: temporarily opens the BIT exchange transcript (PDF, new tab)"
+    },
+    "bit": {
+      "title": "Beijing Institute of Technology",
+      "period": "25 February - 5 July 2026",
+      "description": "Computer Science · Academic exchange",
+      "transcript": "BIT academic transcript (PDF, new tab)"
+    }
+  },
+  "experience": {
+    "title": "Work experience",
+    "duration": "{months, plural, one {# month} other {# months}}",
+    "yandex": {
+      "title": "Yandex",
+      "period": "5 August - 4 November 2026",
+      "label": "Internship",
+      "role": "Go Backend Developer",
+      "description": "Storage Infrastructure Development Team"
+    }
   }
 }

@@ -15,7 +15,7 @@ const inter = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Новиков Андрей",
-  description: "Сайт-портфолио 18 летнего Fullstack разработчика",
+  description: "Сайт-портфолио 20-летнего Fullstack разработчика",
 };
 
 export const viewport: Viewport = {
