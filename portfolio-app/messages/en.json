@@ -3,7 +3,7 @@
     "fullname": "Novikov Andrei"
   },
   "metadata": {
-    "description": "Portfolio website of a {age}-year-old Fullstack developer"
+    "description": "Portfolio website of a Fullstack developer, {age, plural, one {# year old} other {# years old}}"
   },
   "header": {
     "projects": "Projects",
