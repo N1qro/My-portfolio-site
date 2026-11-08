@@ -32,6 +32,7 @@ import { Button } from "@/components/button";
 import Link from "next/link";
 import { HomeDescription } from "./homeDescription";
 
+export const instant = false
 
 export default async function Home() {
   const locale = await getLocale()

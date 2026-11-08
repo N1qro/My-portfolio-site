@@ -15,8 +15,6 @@ import {getPortfolioOwnerAge} from '@/lib/portfolio-owner';
 
 const inter = Manrope({ subsets: ["latin"] });
 
-export const instant = false
-
 export async function generateMetadata({
   params,
 }: {
