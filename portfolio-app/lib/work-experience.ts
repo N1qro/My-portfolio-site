@@ -1,6 +1,6 @@
 import { type ImageProps } from "next/image"
 import { type useTranslations } from "next-intl"
-import yandex from "@/assets/img/yandex.svg"
+import yandexLogo from "@/assets/img/yandex.svg"
 
 export interface WorkExperienceEntryData {
   id: string
@@ -19,7 +19,7 @@ export function getExperience(translate: ReturnType<typeof useTranslations>) {
       id: "yandex",
       period: translate("experience.yandex.period"),
       title: translate("experience.yandex.title"),
-      logo: yandex,
+      logo: yandexLogo,
       label: translate("experience.yandex.label"),
       role: translate("experience.yandex.role"),
       description: translate("experience.yandex.description"),

@@ -126,12 +126,14 @@
     "fact_6": "Childhood dream - to create a game in Roblox",
     "fact_7": "If I could choose between a technological and a magical world, I would choose the latter"
   },
+  "common": {
+    "openDocument": "Open document"
+  },
   "education": {
     "title": "Education",
     "level": "Degree in progress",
     "grade": "GPA",
     "transcript": "Academic transcript",
-    "openDocument": "Open document",
     "russia": "Russia",
     "china": "China",
     "innopolis": {

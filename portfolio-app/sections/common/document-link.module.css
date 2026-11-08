@@ -1,0 +1,27 @@
+.documentLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 28px;
+  border-bottom: 1px solid #5d8ef755;
+  color: #adc5ff;
+  font-size: var(--document-link-font-size, 0.72rem);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.paperclip { flex-shrink: 0; }
+.documentType {
+  color: #aaa;
+  font-size: 0.6rem;
+}
+
+.documentLink:hover {
+  color: #d0dfff;
+  border-color: currentColor;
+}
+
+.documentLink:focus-visible {
+  outline: 2px solid #5d8ef7;
+  outline-offset: 3px;
+}

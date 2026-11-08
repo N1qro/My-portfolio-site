@@ -26,6 +26,7 @@
 
 .entries {
   --entry-gap: 1.4rem;
+  --content-gap: 0.3rem;
   --timeline-tail: 1.2rem;
   --marker-size: 7px;
   --marker-offset: 0.6rem;
@@ -41,8 +42,49 @@
   min-width: 0;
   display: grid;
   align-content: start;
-  gap: 0.3rem;
+  gap: var(--content-gap);
   padding-left: 1.3rem;
+}
+
+.period {
+  color: #aaa;
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.logo {
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-top: 0.1em;
+}
+
+.label {
+  display: inline-block;
+  color: #aaa;
+  font-size: 0.76rem;
+  font-weight: 400;
+}
+
+.description {
+  color: #bbb;
+  font-size: 0.76rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.role {
+  color: #ddd;
+  font-size: 0.8rem;
+  margin-bottom: 0.15rem;
 }
 
 .entry::before {
@@ -89,58 +131,34 @@
   z-index: 1;
 }
 
-.period {
-  color: #aaa;
-  font-size: 0.7rem;
-  line-height: 1.5;
-}
-
-.title {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.4rem;
-  font-size: 0.9rem;
-  line-height: 1.45;
-  overflow-wrap: anywhere;
-}
-
-.logo {
-  flex-shrink: 0;
-  object-fit: contain;
-  margin-top: 0.1em;
-}
-
-.label {
-  display: inline-block;
-  color: #aaa;
-  font-size: 0.76rem;
-  font-weight: 400;
-}
-
-.description {
-  color: #bbb;
-  font-size: 0.76rem;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-
-.role {
-  color: #ddd;
-  font-size: 0.8rem;
-  margin-bottom: 0.15rem;
-}
-
 @media (max-width: 700px) {
-  .title { font-size: 1rem; }
-  .role { font-size: 0.92rem; }
-  .description { font-size: 0.88rem; }
+  .title {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 0.92rem;
+  }
+
+  .description {
+    font-size: 0.88rem;
+  }
 }
 
 @keyframes glow {
-  from { border-color: #78a5ff; box-shadow: 0 0 5px #5d8ef740; }
-  to { border-color: #c4a1ff; box-shadow: 0 0 12px #a686f780; }
+  from {
+    border-color: #78a5ff;
+    box-shadow: 0 0 5px #5d8ef740;
+  }
+
+  to {
+    border-color: #c4a1ff;
+    box-shadow: 0 0 12px #a686f780;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .entry:last-child::after { animation: none; }
+  .entry:last-child::after {
+    animation: none;
+  }
 }
