@@ -9,7 +9,10 @@ import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg";
 import getProjects from "@/lib/projects";
 import getAchievements from "@/lib/achievements";
-import Background from "./background";
+import { EducationEntry, EducationSection } from "@/components/education-section";
+import { WorkExperienceEntry, WorkExperienceSection } from "@/components/work-experience-section";
+import { getEducation } from "@/lib/education";
+import { getExperience } from "@/lib/work-experience";
 import { contactEmail, currentLocation } from "@/lib/constraints";
 
 import picture1 from "@/assets/img/personal/photo_first.png"
@@ -30,6 +33,8 @@ import Link from "next/link";
 
 export default function Home() {
   const t = useTranslations()
+  const education = getEducation(t)
+  const experience = getExperience(t)
   const savedFact = parseInt(cookies().get("latestFact")?.value || "0");
 
   return (
@@ -62,7 +67,15 @@ export default function Home() {
           alt="thumbnail"
         />
       </section>
-      <Background />
+      <div className={styles.educationAndExperience}>
+        <EducationSection className={styles.education}>
+          <EducationEntry entry={education.innopolis} />
+          <EducationEntry entry={education.bitExchange} />
+        </EducationSection>
+        <WorkExperienceSection className={styles.workExperience}>
+          <WorkExperienceEntry entry={experience.yandexInternship} />
+        </WorkExperienceSection>
+      </div>
       <section
         id="projects"
         className={`${containerStyles.section_projects} offset`}

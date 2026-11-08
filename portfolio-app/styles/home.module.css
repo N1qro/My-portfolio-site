@@ -3,3 +3,22 @@
   align-items: center;
   gap: 0.2rem;
 }
+
+.educationAndExperience {
+  --education-basis: 600px;
+  --experience-basis: 300px;
+  --education-grow: 2;
+  --experience-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.education {
+  flex: var(--education-grow) 1 var(--education-basis);
+}
+
+.workExperience {
+  flex: var(--experience-grow) 1 var(--experience-basis);
+}
