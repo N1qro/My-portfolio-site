@@ -3,8 +3,8 @@ import { cacheLife } from "next/cache"
 
 export const ONE_DAY_IN_SECONDS = 24 * 60 * 60
 
-// The day is approximate to avoid publishing the exact birth date.
-const portfolioOwnerBirthDate = { year: 2006, month: 3, day: 15 }
+// Only the month and year are stored to keep the exact birth date private.
+const portfolioOwnerBirthDate = { year: 2006, month: 3 }
 
 export async function getPortfolioOwnerAge(): Promise<number> {
   "use cache"
@@ -14,9 +14,11 @@ export async function getPortfolioOwnerAge(): Promise<number> {
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear()
   const currentMonth = currentDate.getMonth() + 1
-  const currentDay = currentDate.getDate()
-  const birthdayHasPassed = currentMonth > portfolioOwnerBirthDate.month
-    || (currentMonth === portfolioOwnerBirthDate.month && currentDay >= portfolioOwnerBirthDate.day)
+  let portfolioOwnerAge = currentYear - portfolioOwnerBirthDate.year
 
-  return currentYear - portfolioOwnerBirthDate.year - (birthdayHasPassed ? 0 : 1)
+  if (currentMonth < portfolioOwnerBirthDate.month) {
+    portfolioOwnerAge -= 1
+  }
+
+  return portfolioOwnerAge
 }
