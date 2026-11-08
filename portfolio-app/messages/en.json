@@ -2,6 +2,9 @@
   "author": {
     "fullname": "Novikov Andrei"
   },
+  "metadata": {
+    "description": "Portfolio website of a {age}-year-old Fullstack developer"
+  },
   "header": {
     "projects": "Projects",
     "achievements": "Achievements",
@@ -13,7 +16,7 @@
   },
   "home": {
     "location": "Innopolis, Russia",
-    "description": "Web developer, 20 years. Student of Innopolis University, winner and prize-winner of Olympiads, creator of bots in Discord, interested in entrepreneurship",
+    "description": "Web developer, {age, plural, one {# year old} other {# years old}}. Student of Innopolis University, winner and prize-winner of Olympiads, creator of bots in Discord, interested in entrepreneurship",
     "projects": "My projects",
     "achievements": "Achievements",
     "pictures": "Pictures",

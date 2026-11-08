@@ -7,16 +7,30 @@ import Footer from "@/components/footer";
 import styles from "@/styles/containers.module.css"
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import {NextIntlClientProvider, Locale, hasLocale} from 'next-intl';
+import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import {getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import {getPortfolioOwnerAge} from '@/lib/portfolio-owner';
 
 const inter = Manrope({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Новиков Андрей",
-  description: "Сайт-портфолио 20-летнего Fullstack разработчика",
-};
+export const instant = false
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string}>
+}): Promise<Metadata> {
+  const {locale} = await params
+  const translate = await getTranslations({ locale, namespace: "metadata" })
+  const portfolioOwnerAge = await getPortfolioOwnerAge()
+
+  return {
+    title: "Новиков Андрей",
+    description: translate("description", { age: portfolioOwnerAge }),
+  }
+}
 
 export const viewport: Viewport = {
   initialScale: 0.75,

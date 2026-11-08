@@ -6,7 +6,6 @@ import { useTranslations } from "next-intl"
 
 export default function Footer() {
   const t = useTranslations()
-  const year = new Date().getFullYear()
 
   return (
     <footer className={containerStyles.footer}>
