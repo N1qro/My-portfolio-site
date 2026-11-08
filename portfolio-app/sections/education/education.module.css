@@ -108,7 +108,7 @@
   overflow-wrap: anywhere;
 }
 
-.documents {
+.results {
   --document-link-font-size: 0.72rem;
   display: flex;
   flex-wrap: wrap;
@@ -243,7 +243,7 @@
   }
 
   .description,
-  .documents {
+  .results {
     font-size: 0.88rem;
   }
 
@@ -252,7 +252,7 @@
     font-size: 0.8rem;
   }
 
-  .documents {
+  .results {
     --document-link-font-size: 0.8rem;
   }
 }

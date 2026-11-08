@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { Children, type ReactElement, type ReactNode } from "react"
-import { type WorkExperienceEntryData } from "@/lib/work-experience"
+import { formatWorkExperienceDuration, type WorkExperienceEntryData } from "@/lib/work-experience"
 import styles from "./work.module.css"
 
 interface WorkExperienceEntryProps {
@@ -17,28 +17,15 @@ function WorkExperienceSection({ children }: WorkExperienceSectionProps) {
   const workExperienceEntries = Children.toArray(children) as ReactElement<WorkExperienceEntryProps>[]
   if (workExperienceEntries.length === 0) return null
 
-  const totalExperienceMonths = workExperienceEntries.reduce(
-    (totalMonths, workExperienceEntry) => totalMonths + workExperienceEntry.props.entry.durationMonths,
-    0,
-  )
-  const experienceYears = Math.floor(totalExperienceMonths / 12)
-  const remainingExperienceMonths = totalExperienceMonths % 12
-  const durationParts: string[] = []
-
-  if (experienceYears > 0) {
-    durationParts.push(translate("durationYears", { years: experienceYears }))
-  }
-  if (remainingExperienceMonths > 0 || totalExperienceMonths === 0) {
-    durationParts.push(translate("durationMonths", { months: remainingExperienceMonths }))
-  }
-
+  const workEntries = workExperienceEntries.map((workExperienceEntry) => workExperienceEntry.props.entry)
+  const workExperienceDuration = formatWorkExperienceDuration(workEntries, translate)
   const sectionHeadingId = "experience-heading"
 
   return (
     <section className={styles.section} id="experience" aria-labelledby={sectionHeadingId}>
       <header className={styles.header}>
         <h2 className={styles.heading} id={sectionHeadingId}>{translate("title")}</h2>
-        <p className={styles.subtitle}>{durationParts.join(" ")}</p>
+        <p className={styles.subtitle}>{workExperienceDuration}</p>
       </header>
       <ol className={styles.entries}>{workExperienceEntries}</ol>
     </section>

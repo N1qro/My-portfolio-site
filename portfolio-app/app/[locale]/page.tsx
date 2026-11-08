@@ -12,8 +12,8 @@ import getAchievements from "@/lib/achievements";
 import { Education } from "@/sections/education/education";
 import { WorkExperience } from "@/sections/work/work";
 import { SectionGroup } from "@/sections/common/section-group";
-import { getEducation } from "@/lib/education";
-import { getExperience } from "@/lib/work-experience";
+import { getEducationInfo } from "@/lib/education";
+import { getWorkInfo } from "@/lib/work-experience";
 import { contactEmail, currentLocation } from "@/lib/constraints";
 
 import picture1 from "@/assets/img/personal/photo_first.png"
@@ -34,8 +34,8 @@ import Link from "next/link";
 
 export default function Home() {
   const translate = useTranslations()
-  const education = getEducation(translate)
-  const experience = getExperience(translate)
+  const education = getEducationInfo(translate)
+  const experience = getWorkInfo(translate)
   const savedFact = parseInt(cookies().get("latestFact")?.value || "0");
 
   return (

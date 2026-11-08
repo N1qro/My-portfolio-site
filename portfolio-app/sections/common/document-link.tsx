@@ -35,7 +35,7 @@ export function DocumentLink({ href, children, fileType }: DocumentLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      title={translate("openDocument")}
+      title={translate("documentLinkTitle")}
     >
       <PaperclipIcon />
       <span>

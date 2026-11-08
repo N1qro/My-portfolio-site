@@ -13,7 +13,7 @@ export interface WorkExperienceEntryData {
   label?: string
 }
 
-export function getExperience(translate: ReturnType<typeof useTranslations>) {
+export function getWorkInfo(translate: ReturnType<typeof useTranslations>) {
   return {
     yandexInternship: {
       id: "yandex",
@@ -26,4 +26,26 @@ export function getExperience(translate: ReturnType<typeof useTranslations>) {
       durationMonths: 3,
     },
   } satisfies Record<string, WorkExperienceEntryData>
+}
+
+export function formatWorkExperienceDuration(
+  workEntries: WorkExperienceEntryData[],
+  translate: ReturnType<typeof useTranslations>,
+): string {
+  const totalExperienceMonths = workEntries.reduce(
+    (totalMonths, workEntry) => totalMonths + workEntry.durationMonths,
+    0,
+  )
+  const experienceYears = Math.floor(totalExperienceMonths / 12)
+  const remainingExperienceMonths = totalExperienceMonths % 12
+  const durationParts: string[] = []
+
+  if (experienceYears > 0) {
+    durationParts.push(translate("durationYears", { years: experienceYears }))
+  }
+  if (remainingExperienceMonths > 0 || totalExperienceMonths === 0) {
+    durationParts.push(translate("durationMonths", { months: remainingExperienceMonths }))
+  }
+
+  return durationParts.join(" ")
 }

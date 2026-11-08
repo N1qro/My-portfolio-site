@@ -1,7 +1,7 @@
-import Image from "next/image"
+import Image, { type ImageProps } from "next/image"
 import { useTranslations } from "next-intl"
 import { Children, type ReactNode } from "react"
-import { type EducationEntryData } from "@/lib/education"
+import { type EducationCountry, type EducationDocument, type EducationEntryData } from "@/lib/education"
 import { DocumentLink } from "@/sections/common/document-link"
 import styles from "./education.module.css"
 
@@ -11,6 +11,23 @@ interface EducationEntryProps {
 
 interface EducationSectionProps {
   children?: ReactNode
+}
+
+interface EducationPeriodProps {
+  period: string
+  country?: EducationCountry
+}
+
+interface EducationDetailsProps {
+  logo: ImageProps["src"]
+  title: string
+  studyType: string
+  description: string
+}
+
+interface EducationResultsProps {
+  grade?: string
+  documents?: EducationDocument[]
 }
 
 function EducationSection({ children }: EducationSectionProps) {
@@ -42,12 +59,12 @@ function EducationEntry({ entry }: EducationEntryProps) {
         studyType={entry.studyType}
         description={entry.description}
       />
-      <EducationDocuments grade={entry.grade} documents={entry.documents} />
+      <EducationResults grade={entry.grade} documents={entry.documents} />
     </li>
   )
 }
 
-function EducationPeriod({ period, country }: Pick<EducationEntryData, "period" | "country">) {
+function EducationPeriod({ period, country }: EducationPeriodProps) {
   return (
     <p className={styles.period}>
       <span>{period}</span>
@@ -61,10 +78,7 @@ function EducationPeriod({ period, country }: Pick<EducationEntryData, "period" 
   )
 }
 
-function EducationDetails({ logo, title, studyType, description }: Pick<
-  EducationEntryData,
-  "logo" | "title" | "studyType" | "description"
->) {
+function EducationDetails({ logo, title, studyType, description }: EducationDetailsProps) {
   return (
     <div className={styles.body}>
       <h3 className={styles.title}>
@@ -77,12 +91,12 @@ function EducationDetails({ logo, title, studyType, description }: Pick<
   )
 }
 
-function EducationDocuments({ grade, documents = [] }: Pick<EducationEntryData, "grade" | "documents">) {
+function EducationResults({ grade, documents = [] }: EducationResultsProps) {
   const translate = useTranslations("education")
   if (!grade && documents.length === 0) return null
 
   return (
-    <div className={styles.documents}>
+    <div className={styles.results}>
       {grade && (
         <p className={styles.grade}>
           {translate("grade")}: <strong>{grade}</strong>
