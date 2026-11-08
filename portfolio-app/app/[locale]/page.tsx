@@ -9,8 +9,9 @@ import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg";
 import getProjects from "@/lib/projects";
 import getAchievements from "@/lib/achievements";
-import { EducationEntry, EducationSection } from "@/components/education-section";
-import { WorkExperienceEntry, WorkExperienceSection } from "@/components/work-experience-section";
+import * as Education from "@/components/education";
+import * as WorkExperience from "@/components/work-experience";
+import { SectionGroup } from "@/components/section-group";
 import { getEducation } from "@/lib/education";
 import { getExperience } from "@/lib/work-experience";
 import { contactEmail, currentLocation } from "@/lib/constraints";
@@ -67,15 +68,15 @@ export default function Home() {
           alt="thumbnail"
         />
       </section>
-      <div className={styles.educationAndExperience}>
-        <EducationSection className={styles.education}>
-          <EducationEntry entry={education.innopolis} />
-          <EducationEntry entry={education.bitExchange} />
-        </EducationSection>
-        <WorkExperienceSection className={styles.workExperience}>
-          <WorkExperienceEntry entry={experience.yandexInternship} />
-        </WorkExperienceSection>
-      </div>
+      <SectionGroup>
+        <Education.Section>
+          <Education.Entry entry={education.innopolis} />
+          <Education.Entry entry={education.bitExchange} />
+        </Education.Section>
+        <WorkExperience.Section>
+          <WorkExperience.Entry entry={experience.yandexInternship} />
+        </WorkExperience.Section>
+      </SectionGroup>
       <section
         id="projects"
         className={`${containerStyles.section_projects} offset`}

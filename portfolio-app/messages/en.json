@@ -128,26 +128,28 @@
   },
   "education": {
     "title": "Education",
-    "level": "Undergraduate · in progress",
+    "level": "Degree in progress",
     "grade": "GPA",
     "transcript": "Academic transcript",
+    "openDocument": "Open document",
     "russia": "Russia",
     "china": "China",
     "innopolis": {
       "title": "Innopolis University",
-      "description": "Computer Science · Information Systems Engineering",
-      "transcript": "Innopolis transcript: temporarily opens the BIT exchange transcript (PDF, new tab)"
+      "studyType": "Bachelor's degree",
+      "description": "Computer Science, Information Systems Engineering"
     },
     "bit": {
       "title": "Beijing Institute of Technology",
       "period": "25 February - 5 July 2026",
-      "description": "Computer Science · Academic exchange",
-      "transcript": "BIT academic transcript (PDF, new tab)"
+      "studyType": "Academic exchange",
+      "description": "Computer Science"
     }
   },
   "experience": {
     "title": "Work experience",
-    "duration": "{months, plural, one {# month} other {# months}}",
+    "durationMonths": "{months, plural, one {# month} other {# months}}",
+    "durationYears": "{years, plural, one {# year} other {# years}}",
     "yandex": {
       "title": "Yandex",
       "period": "5 August - 4 November 2026",

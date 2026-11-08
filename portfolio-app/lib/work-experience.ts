@@ -2,28 +2,28 @@ import { type ImageProps } from "next/image"
 import { type useTranslations } from "next-intl"
 import yandex from "@/assets/img/yandex.svg"
 
-export interface WorkExperience {
+export interface WorkExperienceEntryData {
   id: string
   period: string
   title: string
   logo: ImageProps["src"]
   role: string
   description: string
-  months: number
+  durationMonths: number
   label?: string
 }
 
-export function getExperience(t: ReturnType<typeof useTranslations>) {
+export function getExperience(translate: ReturnType<typeof useTranslations>) {
   return {
     yandexInternship: {
       id: "yandex",
-      period: t("experience.yandex.period"),
-      title: t("experience.yandex.title"),
+      period: translate("experience.yandex.period"),
+      title: translate("experience.yandex.title"),
       logo: yandex,
-      label: t("experience.yandex.label"),
-      role: t("experience.yandex.role"),
-      description: t("experience.yandex.description"),
-      months: 3,
+      label: translate("experience.yandex.label"),
+      role: translate("experience.yandex.role"),
+      description: translate("experience.yandex.description"),
+      durationMonths: 3,
     },
-  } satisfies Record<string, WorkExperience>
+  } satisfies Record<string, WorkExperienceEntryData>
 }

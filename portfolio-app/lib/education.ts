@@ -5,44 +5,41 @@ import bit from "@/assets/img/bit.png"
 import russiaFlag from "@/assets/img/flags/russia.svg"
 import chinaFlag from "@/assets/img/flags/china.svg"
 
-export interface Education {
+export interface EducationEntryData {
   id: string
   period: string
   title: string
   logo: ImageProps["src"]
+  studyType: string
   description: string
   country?: { name: string, flag: ImageProps["src"] }
   grade?: string
-  transcript?: { url: string, label: string }
+  transcriptUrl?: string
 }
 
-export function getEducation(t: ReturnType<typeof useTranslations>) {
+export function getEducation(translate: ReturnType<typeof useTranslations>) {
   return {
     innopolis: {
       id: "innopolis",
       period: "2024 - 2028",
-      title: t("education.innopolis.title"),
+      title: translate("education.innopolis.title"),
       logo: innopolis,
-      description: t("education.innopolis.description"),
-      country: { name: t("education.russia"), flag: russiaFlag },
+      studyType: translate("education.innopolis.studyType"),
+      description: translate("education.innopolis.description"),
+      country: { name: translate("education.russia"), flag: russiaFlag },
       grade: "4.97/5",
-      transcript: {
-        url: "/docs/bit-transcript.pdf",
-        label: t("education.innopolis.transcript"),
-      },
+      transcriptUrl: "/docs/bit-transcript.pdf",
     },
     bitExchange: {
       id: "bit",
-      period: t("education.bit.period"),
-      title: t("education.bit.title"),
+      period: translate("education.bit.period"),
+      title: translate("education.bit.title"),
       logo: bit,
-      description: t("education.bit.description"),
-      country: { name: t("education.china"), flag: chinaFlag },
+      studyType: translate("education.bit.studyType"),
+      description: translate("education.bit.description"),
+      country: { name: translate("education.china"), flag: chinaFlag },
       grade: "3.7/4",
-      transcript: {
-        url: "/docs/bit-transcript.pdf",
-        label: t("education.bit.transcript"),
-      },
+      transcriptUrl: "/docs/bit-transcript.pdf",
     },
-  } satisfies Record<string, Education>
+  } satisfies Record<string, EducationEntryData>
 }
