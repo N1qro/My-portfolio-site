@@ -27,12 +27,15 @@ import picture8 from "@/assets/img/personal/photo_predprof1.jpg"
 import picture9 from "@/assets/img/personal/photo_prod1.jpg"
 import picture10 from "@/assets/img/personal/photo_prod2.jpg"
 import picture11 from "@/assets/img/personal/photo_prod3.jpg"
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Button } from "@/components/button";
 import Link from "next/link";
+import { HomeDescription } from "./homeDescription";
 
+export const instant = false
 
 export default async function Home() {
+  const locale = await getLocale()
   const translate = await getTranslations()
   const education = getEducationInfo(translate)
   const experience = getWorkInfo(translate)
@@ -55,9 +58,7 @@ export default async function Home() {
             />
             <i className={styles.location}>{translate("home.location")}</i>
           </div>
-          <p>
-            {translate("home.description")}
-          </p>
+          <HomeDescription locale={locale} />
           <a className={commonStyles.link_redirect} href="/resume.pdf">{translate("home.resume")}</a>
           <FactCard savedFact={savedFact} />
         </article>
