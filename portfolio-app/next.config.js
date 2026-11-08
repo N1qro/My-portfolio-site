@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   cacheComponents: true,
-  partialPrefetching: false,
+  partialPrefetching: true,
   images: {
     qualities: [75, 100],
   },
