@@ -27,16 +27,17 @@ import picture8 from "@/assets/img/personal/photo_predprof1.jpg"
 import picture9 from "@/assets/img/personal/photo_prod1.jpg"
 import picture10 from "@/assets/img/personal/photo_prod2.jpg"
 import picture11 from "@/assets/img/personal/photo_prod3.jpg"
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Button } from "@/components/button";
 import Link from "next/link";
 
 
-export default function Home() {
-  const translate = useTranslations()
+export default async function Home() {
+  const translate = await getTranslations()
   const education = getEducationInfo(translate)
   const experience = getWorkInfo(translate)
-  const savedFact = parseInt(cookies().get("latestFact")?.value || "0");
+  const cookieStore = await cookies();
+  const savedFact = parseInt(cookieStore.get("latestFact")?.value || "0");
 
   return (
     <main>

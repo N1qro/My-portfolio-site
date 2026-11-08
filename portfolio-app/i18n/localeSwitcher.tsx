@@ -24,8 +24,8 @@ export default function LocaleSwitcher() {
 
   return (
     <Link href="/" locale="en" className={style.locale_switcher}>
-        <Image width={32} height={32} src={russianFlag} alt='Russian language' />
-        <p>{locale.toUpperCase()}</p>
-      </Link>
+      <Image width={32} height={32} src={russianFlag} alt='Russian language' />
+      <p>{locale.toUpperCase()}</p>
+    </Link>
   )
 }
