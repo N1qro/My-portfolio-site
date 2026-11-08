@@ -13,7 +13,7 @@ export async function getPortfolioOwnerAge(): Promise<number> {
 
   const currentDate = new Date()
   const currentYear = currentDate.getFullYear()
-  const currentMonth = currentDate.getMonth() + 1
+  const currentMonth = currentDate.getMonth() + 1 // getMonth(): 0–11
   let portfolioOwnerAge = currentYear - portfolioOwnerBirthDate.year
 
   if (currentMonth < portfolioOwnerBirthDate.month) {
