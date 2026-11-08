@@ -1,0 +1,8 @@
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.group:empty { display: none; }

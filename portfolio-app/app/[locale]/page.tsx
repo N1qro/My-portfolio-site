@@ -9,6 +9,11 @@ import Image from "next/image";
 import locationImage from "@/assets/svg/location2.svg";
 import getProjects from "@/lib/projects";
 import getAchievements from "@/lib/achievements";
+import { Education } from "@/sections/education/education";
+import { WorkExperience } from "@/sections/work/work";
+import { SectionGroup } from "@/sections/common/section-group";
+import { getEducationInfo } from "@/lib/education";
+import { getWorkInfo } from "@/lib/work-experience";
 import { contactEmail, currentLocation } from "@/lib/constraints";
 
 import picture1 from "@/assets/img/personal/photo_first.png"
@@ -28,7 +33,9 @@ import Link from "next/link";
 
 
 export default function Home() {
-  const t = useTranslations()
+  const translate = useTranslations()
+  const education = getEducationInfo(translate)
+  const experience = getWorkInfo(translate)
   const savedFact = parseInt(cookies().get("latestFact")?.value || "0");
 
   return (
@@ -37,7 +44,7 @@ export default function Home() {
         <article
           className={`${containerStyles.align_vertically} flex-column-gap`}
         >
-          <h1>{t("author.fullname")}</h1>
+          <h1>{translate("author.fullname")}</h1>
           <div className={styles.location_wrapper}>
             <Image
               src={locationImage}
@@ -45,12 +52,12 @@ export default function Home() {
               alt="location-logo"
               style={{ color: "red" }}
             />
-            <i className={styles.location}>{t("home.location")}</i>
+            <i className={styles.location}>{translate("home.location")}</i>
           </div>
           <p>
-            {t("home.description")}
+            {translate("home.description")}
           </p>
-          <a className={commonStyles.link_redirect} href="/resume.pdf">{t("home.resume")}</a>
+          <a className={commonStyles.link_redirect} href="/resume.pdf">{translate("home.resume")}</a>
           <FactCard savedFact={savedFact} />
         </article>
         <Image
@@ -61,21 +68,30 @@ export default function Home() {
           alt="thumbnail"
         />
       </section>
+      <SectionGroup>
+        <Education.Section>
+          <Education.Entry entry={education.innopolis} />
+          <Education.Entry entry={education.bitExchange} />
+        </Education.Section>
+        <WorkExperience.Section>
+          <WorkExperience.Entry entry={experience.yandexInternship} />
+        </WorkExperience.Section>
+      </SectionGroup>
       <section
         id="projects"
         className={`${containerStyles.section_projects} offset`}
       >
-        <h1>{t("home.projects")}</h1>
+        <h1>{translate("home.projects")}</h1>
         <div className={containerStyles.project_container}>
-          {getProjects(t).map((p) => (
+          {getProjects(translate).map((p) => (
             <ProjectCard key={p.id} {...p} />
           ))}
         </div>
       </section>
       <section id="achievements" className="offset">
-        <h1>{t("home.achievements")}</h1>
+        <h1>{translate("home.achievements")}</h1>
         <ul className={containerStyles.achievement_container}>
-          {getAchievements(t).map((achivement, idx) => (
+          {getAchievements(translate).map((achivement, idx) => (
             <li key={idx}>
               {achivement.text}
               {achivement.url && <a href={achivement.url}> 🔗</a>}
@@ -84,7 +100,7 @@ export default function Home() {
         </ul>
       </section>
       <section id="pictures" className="offset">
-        <h1 className="text-center">{t("home.pictures")}</h1>
+        <h1 className="text-center">{translate("home.pictures")}</h1>
         <div className={containerStyles.pictures_container}>
           <div className={containerStyles.picture_column}>
             <img src={picture1.src} alt="" />
@@ -108,8 +124,8 @@ export default function Home() {
         </div>
       </section>
       <section id="contact-me">
-        <h1 className="text-center">{t("home.contact_me")}</h1>
-        <p className="text-center">{t("home.contact_description")} <a className={`${commonStyles.link} ${commonStyles.gradient}`} href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
+        <h1 className="text-center">{translate("home.contact_me")}</h1>
+        <p className="text-center">{translate("home.contact_description")} <a className={`${commonStyles.link} ${commonStyles.gradient}`} href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
       </section>
     </main>
   );

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-8.543955 -8.754455 118.300909 118.300909" fill="#3FBA20">
+  <metadata>
+    Author: Университет Иннополис (Innopolis University), 2023.
+    Source: https://commons.wikimedia.org/wiki/File:ЛОГОТИП_УИ.svg
+    License: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/
+    Modifications: extracted the three monogram paths, omitted the wordmark,
+    recolored from #40BA21 to #3FBA20, and added viewBox padding to preserve
+    the existing PNG's visible size. This adaptation is licensed CC BY-SA 4.0.
+  </metadata>
+  <path d="M28.1168 36.3975L-3.05176e-05 36.3975L-3.08518e-05 100.792L28.1168 100.792L28.1168 36.3975Z"/>
+  <path d="M73.1016 1.89707e-07L73.1016 72.7895L64.6598 72.7895L64.6598 1.45895e-07L36.5482 0L36.5482 100.781L42.5299 100.781L64.6598 100.781L73.1016 100.781L92.1292 100.781L101.213 100.781L101.213 3.35602e-07L73.1016 1.89707e-07Z"/>
+  <path d="M28.1168 1.45922e-07L0 0L-1.45299e-07 27.9967L28.1168 27.9967L28.1168 1.45922e-07Z"/>
+</svg>
