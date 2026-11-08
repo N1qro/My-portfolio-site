@@ -116,6 +116,12 @@
 
 .flag { object-fit: contain; border-radius: 2px; }
 
+.entryBody {
+  display: grid;
+  align-content: start;
+  gap: 0.3rem;
+}
+
 .entryTitle {
   display: flex;
   align-items: flex-start;
@@ -156,7 +162,7 @@
 .transcript:hover { color: #d0dfff; border-color: currentColor; }
 .transcript:focus-visible { outline: 2px solid #5d8ef7; outline-offset: 3px; }
 
-/* Each pair shares its four content rows; every pair starts a new straight line. */
+/* Pairs align dates, body and documents; titles keep their natural height. */
 @container timeline (min-width: 600px) {
   .educationTimeline:not([data-max-columns="1"]) {
     --marker-top: 0px;
@@ -167,7 +173,7 @@
   }
 
   .educationTimeline:not([data-max-columns="1"]) .entry {
-    grid-row: span 4;
+    grid-row: span 3;
     grid-template-rows: subgrid;
     padding: 0.8rem 0.75rem var(--row-gap) 0;
   }

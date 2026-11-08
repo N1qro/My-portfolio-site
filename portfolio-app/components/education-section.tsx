@@ -18,11 +18,13 @@ export function EducationEntry({ entry }: { entry: Education }) {
           {entry.country.name}
         </span>}
       </p>
-      <h3 className={styles.entryTitle}>
-        <Image className={styles.logo} src={entry.logo} width={24} height={24} alt="" />
-        {entry.title}
-      </h3>
-      <p className={styles.description}>{entry.description}</p>
+      <div className={styles.entryBody}>
+        <h3 className={styles.entryTitle}>
+          <Image className={styles.logo} src={entry.logo} width={24} height={24} alt="" />
+          {entry.title}
+        </h3>
+        <p className={styles.description}>{entry.description}</p>
+      </div>
       {(entry.grade || entry.transcript) && <div className={styles.documents}>
         {entry.grade && <p className={styles.grade}>{t("grade")}: <strong>{entry.grade}</strong></p>}
         {entry.transcript && <a
