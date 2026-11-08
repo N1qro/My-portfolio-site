@@ -1,7 +1,7 @@
-import Image, { type ImageProps } from "next/image"
+import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { Children, type ReactNode } from "react"
-import { type EducationCountry, type EducationDocument, type EducationEntryData } from "@/lib/education"
+import { type EducationEntryData } from "@/lib/education"
 import { DocumentLink } from "@/sections/common/document-link"
 import styles from "./education.module.css"
 
@@ -11,23 +11,6 @@ interface EducationEntryProps {
 
 interface EducationSectionProps {
   children?: ReactNode
-}
-
-interface EducationPeriodProps {
-  period: string
-  country?: EducationCountry
-}
-
-interface EducationDetailsProps {
-  logo: ImageProps["src"]
-  title: string
-  studyType: string
-  description: string
-}
-
-interface EducationResultsProps {
-  grade?: string
-  documents?: EducationDocument[]
 }
 
 function EducationSection({ children }: EducationSectionProps) {
@@ -52,19 +35,16 @@ function EducationEntry({ entry }: EducationEntryProps) {
   return (
     <li className={styles.entry}>
       <span className={styles.marker} aria-hidden="true" />
-      <EducationPeriod period={entry.period} country={entry.country} />
-      <EducationDetails
-        logo={entry.logo}
-        title={entry.title}
-        studyType={entry.studyType}
-        description={entry.description}
-      />
-      <EducationResults grade={entry.grade} documents={entry.documents} />
+      <EducationPeriod entry={entry} />
+      <EducationDetails entry={entry} />
+      <EducationResults entry={entry} />
     </li>
   )
 }
 
-function EducationPeriod({ period, country }: EducationPeriodProps) {
+function EducationPeriod({ entry }: EducationEntryProps) {
+  const { period, country } = entry
+
   return (
     <p className={styles.period}>
       <span>{period}</span>
@@ -78,7 +58,9 @@ function EducationPeriod({ period, country }: EducationPeriodProps) {
   )
 }
 
-function EducationDetails({ logo, title, studyType, description }: EducationDetailsProps) {
+function EducationDetails({ entry }: EducationEntryProps) {
+  const { logo, title, studyType, description } = entry
+
   return (
     <div className={styles.body}>
       <h3 className={styles.title}>
@@ -91,8 +73,9 @@ function EducationDetails({ logo, title, studyType, description }: EducationDeta
   )
 }
 
-function EducationResults({ grade, documents = [] }: EducationResultsProps) {
+function EducationResults({ entry }: EducationEntryProps) {
   const translate = useTranslations("education")
+  const { grade, documents = [] } = entry
   if (!grade && documents.length === 0) return null
 
   return (

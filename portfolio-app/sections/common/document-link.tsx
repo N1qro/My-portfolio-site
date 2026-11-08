@@ -40,7 +40,7 @@ export function DocumentLink({ href, children, fileType }: DocumentLinkProps) {
       <PaperclipIcon />
       <span>
         {children}
-        {fileType && <> <small className={styles.documentType}>{fileType}</small></>}
+        {fileType && <small className={styles.documentType}> {fileType}</small>}
       </span>
       <span aria-hidden="true">↗</span>
     </a>

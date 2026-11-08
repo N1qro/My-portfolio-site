@@ -5,17 +5,6 @@ import bitLogo from "@/assets/img/bit.png"
 import russiaFlag from "@/assets/img/flags/russia.svg"
 import chinaFlag from "@/assets/img/flags/china.svg"
 
-export interface EducationCountry {
-  name: string
-  flag: ImageProps["src"]
-}
-
-export interface EducationDocument {
-  href: string
-  label: string
-  fileType?: string
-}
-
 export interface EducationEntryData {
   id: string
   period: string
@@ -23,9 +12,16 @@ export interface EducationEntryData {
   logo: ImageProps["src"]
   studyType: string
   description: string
-  country?: EducationCountry
+  country?: {
+    name: string
+    flag: ImageProps["src"]
+  }
   grade?: string
-  documents?: EducationDocument[]
+  documents?: {
+    href: string
+    label: string
+    fileType?: string
+  }[]
 }
 
 export function getEducationInfo(translate: ReturnType<typeof useTranslations>) {
