@@ -41,7 +41,7 @@ export default async function RootLayout({
   const mode = process.env.NODE_ENV === "production" ? "production" : "development"
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <body className={inter.className}>
         <Analytics mode={mode} />
         <SpeedInsights debug={mode === "development"} />
