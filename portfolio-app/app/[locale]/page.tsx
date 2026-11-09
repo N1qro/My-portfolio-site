@@ -31,6 +31,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Button } from "@/components/button";
 import Link from "next/link";
 import { HomeDescription } from "./homeDescription";
+import { ResumeLanguageSelector } from "./resumeLanguageSelector";
 
 export const instant = false
 
@@ -59,7 +60,12 @@ export default async function Home() {
             <i className={styles.location}>{translate("home.location")}</i>
           </div>
           <HomeDescription locale={locale} />
-          <a className={commonStyles.link_redirect} href="/resume.pdf">{translate("home.resume")}</a>
+          <ResumeLanguageSelector
+            buttonLabel={translate("home.resume")}
+            languagePrompt={translate("home.resumeMenu.prompt")}
+            russianLabel={translate("home.resumeMenu.russian")}
+            englishLabel={translate("home.resumeMenu.english")}
+          />
           <FactCard savedFact={savedFact} />
         </article>
         <Image

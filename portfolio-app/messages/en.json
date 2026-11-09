@@ -22,6 +22,11 @@
     "pictures": "Pictures",
     "contact_me": "Contact me",
     "resume": "View the resume",
+    "resumeMenu": {
+      "prompt": "Choose resume language",
+      "russian": "Russian",
+      "english": "English"
+    },
     "contact_description": "Send a letter to"
   },
   "fact_card": {
