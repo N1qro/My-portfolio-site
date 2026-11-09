@@ -19,7 +19,7 @@ const snowOptions: ISourceOptions = {
   fullScreen: {
     enable: false,
   },
-  fpsLimit: 30,
+  fpsLimit: 60,
   pauseOnBlur: true,
   motion: {
     disable: true,
