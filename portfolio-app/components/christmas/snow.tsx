@@ -17,8 +17,7 @@ const snowOptions: ISourceOptions = {
     opacity: 0,
   },
   fullScreen: {
-    enable: true,
-    zIndex: 1,
+    enable: false,
   },
   fpsLimit: 30,
   pauseOnBlur: true,
@@ -52,7 +51,7 @@ export function Snow() {
   return (
     <div className={styles.snow} aria-hidden="true">
       <NextParticlesProvider init={initializeSnow}>
-        <NextParticles id="christmas-snow" options={snowOptions} />
+        <NextParticles id="christmas-snow" className={styles.canvas} options={snowOptions} />
       </NextParticlesProvider>
     </div>
   )
