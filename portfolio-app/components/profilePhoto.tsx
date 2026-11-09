@@ -1,5 +1,5 @@
 import Image from "next/image"
-import christmasHat from "@/assets/svg/christmas-hat.svg"
+import christmasHat from "@/assets/img/santa-hat.png"
 import type { ProfilePhotoData } from "@/lib/profile-photo"
 import styles from "@/styles/profilePhoto.module.css"
 

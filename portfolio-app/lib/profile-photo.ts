@@ -16,9 +16,9 @@ export const profilePhoto = {
   src: profilePhotoImage,
   alt: "thumbnail",
   christmasHat: {
-    xPercent: 50,
+    xPercent: 53,
     yPercent: 13,
     widthPercent: 32,
-    rotationDegrees: 10,
+    rotationDegrees: -6,
   },
 } satisfies ProfilePhotoData

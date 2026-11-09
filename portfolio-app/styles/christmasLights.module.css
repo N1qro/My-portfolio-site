@@ -14,3 +14,23 @@
   width: 100%;
   height: 100%;
 }
+
+.container [data-fluri-root] {
+  animation: appear 600ms ease-out both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container [data-fluri-root] {
+    animation: none;
+  }
+}
