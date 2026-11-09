@@ -13,6 +13,7 @@
     "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
+    "@headlessui/react": "2.2.10",
     "@vercel/analytics": "2.0.1",
     "@vercel/speed-insights": "2.1.0",
     "color-hash": "2.0.2",
