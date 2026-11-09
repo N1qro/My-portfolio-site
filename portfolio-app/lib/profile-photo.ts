@@ -12,7 +12,7 @@ export interface ProfilePhotoData {
   }
 }
 
-export const profilePhoto = {
+export const profilePhotoData = {
   src: profilePhotoImage,
   alt: "thumbnail",
   christmasHat: {

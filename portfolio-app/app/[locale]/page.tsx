@@ -32,7 +32,7 @@ import Link from "next/link";
 import { HomeDescription } from "./homeDescription";
 import { Dropdown, DropdownButton, DropdownLabel, DropdownLink, DropdownPanel } from "@/components/dropdown";
 import { ProfilePhoto } from "@/components/profilePhoto";
-import { profilePhoto } from "@/lib/profile-photo";
+import { profilePhotoData } from "@/lib/profile-photo";
 
 export const instant = false
 
@@ -79,7 +79,7 @@ export default async function Home() {
           </Dropdown>
           <FactCard savedFact={savedFact} />
         </article>
-        <ProfilePhoto photo={profilePhoto} />
+        <ProfilePhoto photo={profilePhotoData} height={500} />
       </section>
       <SectionGroup>
         <Education.Section>

@@ -6,16 +6,17 @@ import styles from "@/styles/profilePhoto.module.css"
 
 interface ProfilePhotoProps {
   photo: ProfilePhotoData
+  height: number
 }
 
-export function ProfilePhoto({ photo }: ProfilePhotoProps) {
+export function ProfilePhoto({ photo, height }: ProfilePhotoProps) {
   return (
     <div className={styles.portrait}>
       <Image
         className={styles.photo}
         src={photo.src}
         alt={photo.alt}
-        height={500}
+        height={height}
         quality={100}
       />
       <ChristmasHat photo={photo} />
@@ -23,7 +24,7 @@ export function ProfilePhoto({ photo }: ProfilePhotoProps) {
   )
 }
 
-async function ChristmasHat({ photo }: ProfilePhotoProps) {
+async function ChristmasHat({ photo }: { photo: ProfilePhotoData }) {
   const christmasHatPlacement = photo.christmasHat
   if (!christmasHatPlacement) {
     return null
