@@ -40,7 +40,6 @@ export default async function Home() {
   const translate = await getTranslations()
   const education = getEducationInfo(translate)
   const experience = getWorkInfo(translate)
-  const resumeLanguageLabelId = "resume-language-prompt"
   const cookieStore = await cookies();
   const savedFact = parseInt(cookieStore.get("latestFact")?.value || "0");
 
@@ -65,8 +64,8 @@ export default async function Home() {
             <DropdownButton>
               {translate("home.resume")}
             </DropdownButton>
-            <DropdownPanel aria-labelledby={resumeLanguageLabelId}>
-              <DropdownLabel id={resumeLanguageLabelId}>
+            <DropdownPanel>
+              <DropdownLabel>
                 {translate("home.resumeMenu.prompt")}
               </DropdownLabel>
               <DropdownLink href="/resume.pdf" hrefLang="ru" target="_blank">

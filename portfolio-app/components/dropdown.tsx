@@ -5,16 +5,6 @@ import type { HTMLAttributeAnchorTarget, ReactNode } from "react"
 import commonStyles from "@/styles/common.module.css"
 import styles from "@/styles/dropdown.module.css"
 
-interface DropdownPanelProps {
-  children: ReactNode
-  "aria-labelledby": string
-}
-
-interface DropdownLabelProps {
-  children: ReactNode
-  id: string
-}
-
 interface DropdownLinkProps {
   children: ReactNode
   href: string
@@ -35,16 +25,16 @@ export function DropdownButton({ children }: { children: ReactNode }) {
   )
 }
 
-export function DropdownPanel({ children, "aria-labelledby": labelId }: DropdownPanelProps) {
+export function DropdownPanel({ children }: { children: ReactNode }) {
   return (
-    <PopoverPanel className={styles.panel} role="group" aria-labelledby={labelId}>
+    <PopoverPanel className={styles.panel}>
       {children}
     </PopoverPanel>
   )
 }
 
-export function DropdownLabel({ children, id }: DropdownLabelProps) {
-  return <p id={id} className={styles.label}>{children}</p>
+export function DropdownLabel({ children }: { children: ReactNode }) {
+  return <p className={styles.label}>{children}</p>
 }
 
 export function DropdownLink({ children, href, hrefLang, target }: DropdownLinkProps) {
