@@ -5,29 +5,28 @@ import type { HTMLAttributeAnchorTarget, ReactNode } from "react"
 import commonStyles from "@/styles/common.module.css"
 import styles from "@/styles/dropdown.module.css"
 
-interface DropdownProps {
+interface DropdownPanelProps {
   children: ReactNode
-}
-
-interface DropdownPanelProps extends DropdownProps {
   "aria-labelledby": string
 }
 
-interface DropdownLabelProps extends DropdownProps {
+interface DropdownLabelProps {
+  children: ReactNode
   id: string
 }
 
-interface DropdownLinkProps extends DropdownProps {
+interface DropdownLinkProps {
+  children: ReactNode
   href: string
   hrefLang?: string
   target?: HTMLAttributeAnchorTarget
 }
 
-export function Dropdown({ children }: DropdownProps) {
+export function Dropdown({ children }: { children: ReactNode }) {
   return <Popover className={styles.dropdown}>{children}</Popover>
 }
 
-export function DropdownButton({ children }: DropdownProps) {
+export function DropdownButton({ children }: { children: ReactNode }) {
   return (
     <PopoverButton className={`${commonStyles.link_redirect} ${styles.trigger}`}>
       {children}
