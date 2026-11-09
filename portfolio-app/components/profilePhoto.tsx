@@ -8,10 +8,7 @@ interface ProfilePhotoProps {
   photo: ProfilePhotoData
 }
 
-export async function ProfilePhoto({ photo }: ProfilePhotoProps) {
-  const christmasThemeEnabled = await isChristmas()
-  const christmasHatPlacement = photo.christmasHat
-
+export function ProfilePhoto({ photo }: ProfilePhotoProps) {
   return (
     <div className={styles.portrait}>
       <Image
@@ -21,20 +18,34 @@ export async function ProfilePhoto({ photo }: ProfilePhotoProps) {
         height={500}
         quality={100}
       />
-      {christmasThemeEnabled && christmasHatPlacement && (
-        <Image
-          className={styles.hat}
-          src={christmasHat}
-          alt=""
-          aria-hidden="true"
-          style={{
-            left: `${christmasHatPlacement.xPercent}%`,
-            top: `${christmasHatPlacement.yPercent}%`,
-            width: `${christmasHatPlacement.widthPercent}%`,
-            transform: `translate(-50%, -100%) rotate(${christmasHatPlacement.rotationDegrees}deg)`,
-          }}
-        />
-      )}
+      <ChristmasHat photo={photo} />
     </div>
+  )
+}
+
+async function ChristmasHat({ photo }: ProfilePhotoProps) {
+  const christmasHatPlacement = photo.christmasHat
+  if (!christmasHatPlacement) {
+    return null
+  }
+
+  const christmasThemeEnabled = await isChristmas()
+  if (!christmasThemeEnabled) {
+    return null
+  }
+
+  return (
+    <Image
+      className={styles.hat}
+      src={christmasHat}
+      alt=""
+      aria-hidden="true"
+      style={{
+        left: `${christmasHatPlacement.xPercent}%`,
+        top: `${christmasHatPlacement.yPercent}%`,
+        width: `${christmasHatPlacement.widthPercent}%`,
+        transform: `translate(-50%, -100%) rotate(${christmasHatPlacement.rotationDegrees}deg)`,
+      }}
+    />
   )
 }
