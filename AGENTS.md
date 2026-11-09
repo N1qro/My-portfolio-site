@@ -1,0 +1,29 @@
+This is the personal portfolio website project of Novikov Andrei. You have to follow those rules strictly when making any changes to the website:
+
+1. Do not commit directly to the main branch. Create a separate branches with the following name convention: "type/description". For example: "feature/christmas-theme", "fix/css-overflows", "chore/update-dependencies". Both type and description text should be english, lowercase text. Any spaces should be replaced with "-".
+
+2. After creating a branch according to rule (1), complete the requested task end to end, including directly related changes needed to keep the affected parts of the website correct, consistent, and usable. Do not limit the work to only the exact files or strings mentioned by the user. For example, changing a UI text also includes updating its corresponding translations, unless the user explicitly asks otherwise. Small supporting changes are allowed when they directly contribute to the requested result. Avoid unrelated fixes, refactoring, redesigns, or dependency updates; leave independent improvements for separate tasks and PRs. When the task is complete, do not merge the branch into main yourself. Create a PR targeting main and let the user review it and request changes if necessary. Write the PR title and description in English. The title should describe the task briefly and clearly, and the description should be one concise paragraph explaining the main changes. If possible, assign the PR to the user and apply relevant labels. Link any related issues. For issues fully resolved by the PR, include closing references in the description, such as "Closes #10, closes #11".
+
+3. When making commits, follow the following convention: "type: description". For example: "feat: add seasonal christmas decorations", "fix: adjust santa hat placement", "refactor: extract ChristmasHat component". The text should always be english lowercase. Spaces are allowed. If any functions or components or shortings (such as FQDN, DNS, IP, etc) are mentioned - you should make them uppercase or as they are written in the code. For example: "ChristmasHat component", or "implemented IaC ...".
+
+4. If you have to create an issue in the project, it should be written in English language. Uppercase letters are allowed, spaces too. Preferably, write issues either as a paragraph(s) of plain text, occasionally if suitable using bullet lists. Or using the following pattern: "What to do? Why do it? What will be the result?" - for this you can use rich text for headers, but the main text should still be regular paragraphs. If possible, apply relevant labels. Do not put the asignee right away. If the user ask you to start resolving the issue, put the user as an assignee first. Make sure that after issue is solved, the PR is linked to the issue.
+
+5. The contents of the README and description on the GitHub should be in English
+
+6. For each new file in the project, please first think about the best placement for this file. Determine it's purpose and it's responsibility. If possible, try to not mix responsibilities. If the code will get too complex, you should first try to make it readable as per rule (7)
+
+7. For the readability, if you are declaring a variable, make sure it is in correct text case: lowercase, uppercase, etc. Try to think, if you will name the variable as "...", will the user understand it's purpose? For example, if you have created a logo and import it in the code, it is prefered to call the variable "universityLogo" for example, and not just "university". Try to be specific. For example, you want to create a variable "age". It is unknown from the variable itself whose age you are measuring. Better: "portfolioOwnerAge". Inside functions, try to group lines of similar logic. For example: collecting variables, performing calculations, returning result - three sections. If one section is complex enough, it is advised to split it in several line groups or create a helper function to help with calculations. When importing variables into the file using {...} syntax, try to leave spaces at both sides for better readability: "import { SpeedInsights } from ...", not "import {SpeedInsights} from ...".
+
+8. As for CSS, please try to make it readable. Do not use complex selectors, it is better to use ids and classes. Ids are mainly used for anchor links and ARIA relationships, and classes for styling. If possible, try to make CSS reusable and use what is already available.
+
+9. The site has several supported languages. When making changes, please ensure that you have created all required translations. The text should be translated professionally, without any mistakes.
+
+10. If you will update, add, or remove any dependencies, do not edit package-lock.json manually. Let the package manager generate it and make sure the build works and the site loads without any errors or degradation. Make sure to always include the resulting package-lock.json changes in the PR when making any changes to the dependencies.
+
+11. If user will request changes in the PR, do not change already created commits, create new ones.
+
+12. For the comments, it is advised to use code comments in the exceptional cases where the code itself is not able to explain what is does and why.
+
+13. To check the changes, please open the website locally. Do not try to check the functionality on Vercel or any other hosting provider if the website is deployed there. Checking Vercel build and deployment statuses through GitHub is allowed. Necessary checks include: translation, UI adaptability on mobile devices and on desktop, sudden reloads of components ("flashes" or reloading on the screen).
+
+14. Do not write tests for the frontend. This is not a production-heavy website, so we check the changed sections manually with each development iteration. This does not replace running ESLint, TypeScript checks, and a production build.
