@@ -1,5 +1,4 @@
 import FactCard from "./factCard";
-import myself from "@/assets/img/personal/me.png";
 import containerStyles from "@/styles/containers.module.css";
 import commonStyles from "@/styles/common.module.css";
 import ProjectCard from "./projectCard";
@@ -32,6 +31,9 @@ import { Button } from "@/components/button";
 import Link from "next/link";
 import { HomeDescription } from "./homeDescription";
 import { Dropdown, DropdownButton, DropdownLabel, DropdownLink, DropdownPanel } from "@/components/dropdown";
+import { ProfilePhoto } from "@/components/profilePhoto";
+import { profilePhoto } from "@/lib/profile-photo";
+import { isChristmas } from "@/lib/christmas";
 
 export const instant = false
 
@@ -40,6 +42,7 @@ export default async function Home() {
   const translate = await getTranslations()
   const education = getEducationInfo(translate)
   const experience = getWorkInfo(translate)
+  const christmasThemeEnabled = await isChristmas()
   const cookieStore = await cookies();
   const savedFact = parseInt(cookieStore.get("latestFact")?.value || "0");
 
@@ -78,13 +81,7 @@ export default async function Home() {
           </Dropdown>
           <FactCard savedFact={savedFact} />
         </article>
-        <Image
-          className={commonStyles.thumbnail}
-          height={500}
-          quality={100}
-          src={myself}
-          alt="thumbnail"
-        />
+        <ProfilePhoto photo={profilePhoto} christmasThemeEnabled={christmasThemeEnabled} />
       </section>
       <SectionGroup>
         <Education.Section>

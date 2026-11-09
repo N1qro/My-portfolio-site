@@ -1,0 +1,26 @@
+.portrait {
+  position: relative;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: fit-content;
+}
+
+.photo {
+  display: block;
+  border-radius: 20px;
+}
+
+.hat {
+  position: absolute;
+  height: auto;
+  transform-origin: bottom center;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 2px 2px #0003);
+}
+
+@media (max-width: 700px) {
+  .portrait {
+    display: none;
+  }
+}

@@ -1,7 +1,8 @@
 import { cacheLife } from "next/cache"
 import { type Locale } from "next-intl"
 import { getTranslations } from "next-intl/server"
-import { getPortfolioOwnerAge, ONE_DAY_IN_SECONDS } from "@/lib/portfolio-owner"
+import { getPortfolioOwnerAge } from "@/lib/portfolio-owner"
+import { ONE_DAY_IN_SECONDS } from "@/lib/time"
 
 export async function HomeDescription({ locale }: { locale: Locale }) {
   "use cache"

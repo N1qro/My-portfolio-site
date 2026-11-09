@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200" fill="none">
+  <metadata>Original vector artwork created for this portfolio. No third-party artwork is used.</metadata>
+  <defs>
+    <linearGradient id="hat-fabric" x1="51" y1="69" x2="190" y2="161" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f44b43"/>
+      <stop offset="0.5" stop-color="#d82c34"/>
+      <stop offset="1" stop-color="#a70d27"/>
+    </linearGradient>
+    <linearGradient id="hat-fur" x1="120" y1="150" x2="120" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffdf7"/>
+      <stop offset="0.6" stop-color="#fff"/>
+      <stop offset="1" stop-color="#dce3ea"/>
+    </linearGradient>
+    <radialGradient id="hat-pompom" cx="0" cy="0" r="1" gradientTransform="translate(208 99) rotate(65) scale(27)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="0.65" stop-color="#fffdf7"/>
+      <stop offset="1" stop-color="#dce3ea"/>
+    </radialGradient>
+  </defs>
+  <path d="M29 162C46 124 67 72 109 27C123 12 142 8 158 18C184 34 210 68 219 104L198 117C181 90 169 75 150 68C148 101 167 133 204 163Z" fill="url(#hat-fabric)"/>
+  <path d="M149 69C136 94 144 127 164 146C140 132 125 111 128 88C132 78 139 72 149 69Z" fill="#a40e2a" opacity="0.35"/>
+  <path d="M52 138C66 99 86 64 109 40" stroke="#ff8e79" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+  <path d="M205 83C210 78 218 80 221 85C230 83 236 89 235 96C242 101 241 109 236 114C238 122 231 129 223 128C217 135 208 132 204 127C195 128 190 122 191 115C184 109 187 101 192 97C191 90 197 84 205 83Z" fill="url(#hat-pompom)"/>
+  <path d="M21 153C77 143 158 143 215 155C225 157 230 164 230 174C230 183 225 189 216 191C155 202 83 202 21 191C11 189 6 182 7 173C7 163 12 156 21 153Z" fill="url(#hat-fur)"/>
+  <path d="M25 158C83 149 156 149 211 160" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+</svg>
