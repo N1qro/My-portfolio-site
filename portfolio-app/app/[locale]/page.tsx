@@ -68,10 +68,10 @@ export default async function Home() {
               <DropdownLabel>
                 {translate("home.resumeMenu.prompt")}
               </DropdownLabel>
-              <DropdownLink href="/resume.pdf" hrefLang="ru" target="_blank">
+              <DropdownLink href="/resume.pdf?version=2026-11-03" hrefLang="ru" target="_blank">
                 {translate("home.resumeMenu.russian")}
               </DropdownLink>
-              <DropdownLink href="/resume-en.pdf" hrefLang="en" target="_blank">
+              <DropdownLink href="/resume-en.pdf?version=2026-11-03" hrefLang="en" target="_blank">
                 {translate("home.resumeMenu.english")}
               </DropdownLink>
             </DropdownPanel>
