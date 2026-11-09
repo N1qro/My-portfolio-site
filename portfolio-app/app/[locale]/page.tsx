@@ -31,6 +31,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Button } from "@/components/button";
 import Link from "next/link";
 import { HomeDescription } from "./homeDescription";
+import { Dropdown, DropdownButton, DropdownLabel, DropdownLink, DropdownPanel } from "@/components/dropdown";
 
 export const instant = false
 
@@ -59,7 +60,22 @@ export default async function Home() {
             <i className={styles.location}>{translate("home.location")}</i>
           </div>
           <HomeDescription locale={locale} />
-          <a className={commonStyles.link_redirect} href="/resume.pdf">{translate("home.resume")}</a>
+          <Dropdown>
+            <DropdownButton>
+              {translate("home.resume")}
+            </DropdownButton>
+            <DropdownPanel>
+              <DropdownLabel>
+                {translate("home.resumeMenu.prompt")}
+              </DropdownLabel>
+              <DropdownLink href="/resume.pdf" hrefLang="ru" target="_blank">
+                {translate("home.resumeMenu.russian")}
+              </DropdownLink>
+              <DropdownLink href="/resume-en.pdf" hrefLang="en" target="_blank">
+                {translate("home.resumeMenu.english")}
+              </DropdownLink>
+            </DropdownPanel>
+          </Dropdown>
           <FactCard savedFact={savedFact} />
         </article>
         <Image

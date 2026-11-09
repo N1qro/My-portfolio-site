@@ -22,6 +22,11 @@
     "pictures": "Фотографии",
     "contact_me": "Связаться со мной",
     "resume": "Посмотреть резюме",
+    "resumeMenu": {
+      "prompt": "Выберите язык резюме",
+      "russian": "Русское",
+      "english": "Английское"
+    },
     "contact_description": "Можно отправить письмо на"
   },
   "fact_card": {

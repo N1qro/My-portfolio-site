@@ -1,0 +1,65 @@
+.dropdown {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chevron {
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.trigger[aria-expanded="true"] .chevron {
+  transform: rotate(225deg);
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 10;
+  width: max-content;
+  min-width: 100%;
+  max-width: calc(100vw - 2rem);
+  padding: 0.75rem;
+  border: 1px solid #555;
+  border-radius: 10px;
+  background: var(--dark-color-2);
+  box-shadow: 0 6px 20px #0006;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  font-size: 0.85em;
+}
+
+.link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.link:hover {
+  background: #494949;
+}
+
+.trigger:focus-visible,
+.link:focus-visible {
+  outline: 2px solid #598cf2;
+  outline-offset: 3px;
+}
