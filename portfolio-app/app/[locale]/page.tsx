@@ -31,7 +31,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Button } from "@/components/button";
 import Link from "next/link";
 import { HomeDescription } from "./homeDescription";
-import { ResumeLanguageSelector } from "./resumeLanguageSelector";
+import { Dropdown, DropdownButton, DropdownLabel, DropdownLink, DropdownPanel } from "@/components/dropdown";
 
 export const instant = false
 
@@ -40,6 +40,7 @@ export default async function Home() {
   const translate = await getTranslations()
   const education = getEducationInfo(translate)
   const experience = getWorkInfo(translate)
+  const resumeLanguageLabelId = "resume-language-prompt"
   const cookieStore = await cookies();
   const savedFact = parseInt(cookieStore.get("latestFact")?.value || "0");
 
@@ -60,12 +61,22 @@ export default async function Home() {
             <i className={styles.location}>{translate("home.location")}</i>
           </div>
           <HomeDescription locale={locale} />
-          <ResumeLanguageSelector
-            buttonLabel={translate("home.resume")}
-            languagePrompt={translate("home.resumeMenu.prompt")}
-            russianLabel={translate("home.resumeMenu.russian")}
-            englishLabel={translate("home.resumeMenu.english")}
-          />
+          <Dropdown>
+            <DropdownButton>
+              {translate("home.resume")}
+            </DropdownButton>
+            <DropdownPanel aria-labelledby={resumeLanguageLabelId}>
+              <DropdownLabel id={resumeLanguageLabelId}>
+                {translate("home.resumeMenu.prompt")}
+              </DropdownLabel>
+              <DropdownLink href="/resume.pdf" hrefLang="ru" target="_blank">
+                {translate("home.resumeMenu.russian")}
+              </DropdownLink>
+              <DropdownLink href="/resume-en.pdf" hrefLang="en" target="_blank">
+                {translate("home.resumeMenu.english")}
+              </DropdownLink>
+            </DropdownPanel>
+          </Dropdown>
           <FactCard savedFact={savedFact} />
         </article>
         <Image
