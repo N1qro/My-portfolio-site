@@ -1,14 +1,15 @@
 import Image from "next/image"
 import christmasHat from "@/assets/img/santa-hat.png"
+import { isChristmas } from "@/lib/christmas"
 import type { ProfilePhotoData } from "@/lib/profile-photo"
 import styles from "@/styles/profilePhoto.module.css"
 
 interface ProfilePhotoProps {
   photo: ProfilePhotoData
-  christmasThemeEnabled: boolean
 }
 
-export function ProfilePhoto({ photo, christmasThemeEnabled }: ProfilePhotoProps) {
+export async function ProfilePhoto({ photo }: ProfilePhotoProps) {
+  const christmasThemeEnabled = await isChristmas()
   const christmasHatPlacement = photo.christmasHat
 
   return (

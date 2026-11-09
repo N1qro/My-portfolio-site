@@ -33,7 +33,6 @@ import { HomeDescription } from "./homeDescription";
 import { Dropdown, DropdownButton, DropdownLabel, DropdownLink, DropdownPanel } from "@/components/dropdown";
 import { ProfilePhoto } from "@/components/profilePhoto";
 import { profilePhoto } from "@/lib/profile-photo";
-import { isChristmas } from "@/lib/christmas";
 
 export const instant = false
 
@@ -42,7 +41,6 @@ export default async function Home() {
   const translate = await getTranslations()
   const education = getEducationInfo(translate)
   const experience = getWorkInfo(translate)
-  const christmasThemeEnabled = await isChristmas()
   const cookieStore = await cookies();
   const savedFact = parseInt(cookieStore.get("latestFact")?.value || "0");
 
@@ -81,7 +79,7 @@ export default async function Home() {
           </Dropdown>
           <FactCard savedFact={savedFact} />
         </article>
-        <ProfilePhoto photo={profilePhoto} christmasThemeEnabled={christmasThemeEnabled} />
+        <ProfilePhoto photo={profilePhoto} />
       </section>
       <SectionGroup>
         <Education.Section>
