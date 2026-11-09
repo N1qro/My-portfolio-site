@@ -1,7 +1,6 @@
 import "server-only"
 import { cacheLife } from "next/cache"
-
-export const ONE_DAY_IN_SECONDS = 24 * 60 * 60
+import { ONE_DAY_IN_SECONDS } from "./time"
 
 // Only the month and year are stored to keep the exact birth date private.
 const portfolioOwnerBirthDate = { year: 2006, month: 3 }

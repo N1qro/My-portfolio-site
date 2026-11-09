@@ -12,6 +12,7 @@ import {getTranslations} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 import {getPortfolioOwnerAge} from '@/lib/portfolio-owner';
+import { ChristmasDecorations } from '@/components/christmas/christmasDecorations';
 
 const inter = Manrope({ subsets: ["latin"] });
 
@@ -55,6 +56,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} data-scroll-behavior="smooth">
       <body className={inter.className}>
+        <ChristmasDecorations />
         <Analytics mode={mode} />
         <SpeedInsights debug={mode === "development"} />
         <NextIntlClientProvider>

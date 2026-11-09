@@ -1,5 +1,4 @@
 import FactCard from "./factCard";
-import myself from "@/assets/img/personal/me.png";
 import containerStyles from "@/styles/containers.module.css";
 import commonStyles from "@/styles/common.module.css";
 import ProjectCard from "./projectCard";
@@ -32,6 +31,8 @@ import { Button } from "@/components/button";
 import Link from "next/link";
 import { HomeDescription } from "./homeDescription";
 import { Dropdown, DropdownButton, DropdownLabel, DropdownLink, DropdownPanel } from "@/components/dropdown";
+import { ProfilePhoto } from "@/components/profilePhoto";
+import { profilePhotoData } from "@/lib/profile-photo";
 
 export const instant = false
 
@@ -78,13 +79,7 @@ export default async function Home() {
           </Dropdown>
           <FactCard savedFact={savedFact} />
         </article>
-        <Image
-          className={commonStyles.thumbnail}
-          height={500}
-          quality={100}
-          src={myself}
-          alt="thumbnail"
-        />
+        <ProfilePhoto photo={profilePhotoData} height={500} />
       </section>
       <SectionGroup>
         <Education.Section>

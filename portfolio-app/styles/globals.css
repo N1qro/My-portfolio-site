@@ -21,11 +21,8 @@ body {
   background-color: var(--dark-color-1);
 }
 
-html {
-  padding-top: 10px;
-}
-
 body {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

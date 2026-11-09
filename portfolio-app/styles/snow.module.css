@@ -1,0 +1,32 @@
+.snow {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  contain: strict;
+  pointer-events: none;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.snow canvas {
+  animation: appear 600ms ease-out both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snow {
+    display: none;
+  }
+}
