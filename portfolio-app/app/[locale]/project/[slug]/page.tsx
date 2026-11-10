@@ -5,7 +5,7 @@ import projectStyles from "@/styles/projects.module.css";
 import GithubCard from "@/components/githubCard";
 import ProjectTags from "./projectTags";
 import VideoPlayer from "./videoPlayer";
-import LinkBack from "./linkBack";
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 
 interface PageProps {
@@ -63,7 +63,7 @@ export default async function ProjectDisplay(props: PageProps) {
 
   return (
     <main className={containerStyles.project_main}>
-      <LinkBack>{"<-"} {translate("project_page.return_back")}</LinkBack>
+      <Link href="/#projects">{"<-"} {translate("project_page.return_back")}</Link>
       <div className={containerStyles.project_page_container}>
         <article>
           <h2>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import LinkBack from "./linkBack";
 
 function NotFound() {
   return (
