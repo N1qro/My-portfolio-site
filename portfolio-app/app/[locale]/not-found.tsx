@@ -1,11 +1,14 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 function NotFound() {
+  const translate = useTranslations("not_found")
+
   return (
     <>
-      <h2 className="mt-3">Ой, как вы сюда попали?</h2>
+      <h2 className="mt-3">{translate("how_did_you_get_here")}</h2>
       <Link href="/" autoFocus>
-        {"->"}Вам сюда {"<-"}
+        {"->"}{translate("go_home")} {"<-"}
       </Link>
     </>
   );

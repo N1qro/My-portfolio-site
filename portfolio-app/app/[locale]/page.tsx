@@ -55,7 +55,7 @@ export default async function Home() {
             <Image
               src={locationImage}
               height={27}
-              alt="location-logo"
+              alt=""
               style={{ color: "red" }}
             />
             <i className={styles.location}>{translate("home.location")}</i>
@@ -79,7 +79,7 @@ export default async function Home() {
           </Dropdown>
           <FactCard savedFact={savedFact} />
         </article>
-        <ProfilePhoto photo={profilePhotoData} height={500} />
+        <ProfilePhoto photo={profilePhotoData} height={500} alt={translate("home.profilePhotoAlt")} />
       </section>
       <SectionGroup>
         <Education.Section>
@@ -107,7 +107,7 @@ export default async function Home() {
           {getAchievements(translate).map((achivement, idx) => (
             <li key={idx}>
               {achivement.text}
-              {achivement.url && <a href={achivement.url}> 🔗</a>}
+              {achivement.url && <a href={achivement.url} aria-label={translate("common.documentLinkTitle")}> 🔗</a>}
             </li>
           ))}
         </ul>

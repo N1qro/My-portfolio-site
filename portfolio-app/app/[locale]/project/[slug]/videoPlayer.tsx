@@ -1,4 +1,5 @@
 import projectStyles from "@/styles/projects.module.css"
+import { useTranslations } from "next-intl"
 
 interface PlayerProps {
   preview: string,
@@ -8,6 +9,8 @@ interface PlayerProps {
 }
 
 export default function VideoPlayer({ width, height, preview, src }: PlayerProps) {
+  const translate = useTranslations("project_page")
+
   if (src) {
     return (
       <video
@@ -23,7 +26,7 @@ export default function VideoPlayer({ width, height, preview, src }: PlayerProps
   return (
     <div className={projectStyles.not_found_wrapper}>
       <div className={projectStyles.video_not_found} style={{backgroundImage: `url(${preview})`}} />
-      <h3>Видео временно недоступно</h3>
+      <h3>{translate("video_unavailable")}</h3>
     </div>
   )
 }

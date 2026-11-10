@@ -39,9 +39,9 @@ export default function FactCard({ savedFact }: FactProps) {
         {t("fact_card.fact_about_me")} {currentFact + 1}/{facts.length}
       </h3>
       <div className={styles.card}>
-        <Button onClick={() => incrementFactBy(-1)}>{"<"}</Button>
+        <Button onClick={() => incrementFactBy(-1)} aria-label={t("fact_card.previousFact")}>{"<"}</Button>
         <p className={styles.fact_text}>{facts[currentFact]}</p>
-        <Button onClick={() => incrementFactBy(1)}>{">"}</Button>
+        <Button onClick={() => incrementFactBy(1)} aria-label={t("fact_card.nextFact")}>{">"}</Button>
       </div>
     </div>
   );

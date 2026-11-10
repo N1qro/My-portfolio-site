@@ -3,7 +3,6 @@ import profilePhotoImage from "@/assets/img/personal/me.png"
 
 export interface ProfilePhotoData {
   src: StaticImageData
-  alt: string
   christmasHat?: {
     xPercent: number
     yPercent: number
@@ -14,7 +13,6 @@ export interface ProfilePhotoData {
 
 export const profilePhotoData = {
   src: profilePhotoImage,
-  alt: "thumbnail",
   christmasHat: {
     xPercent: 53,
     yPercent: 16,

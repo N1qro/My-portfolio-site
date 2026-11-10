@@ -1,11 +1,14 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 function NotFound() {
+  const translate = useTranslations("not_found")
+
   return (
     <>
-      <h2 className="mt-3">Проект не найден</h2>
+      <h2 className="mt-3">{translate("project_not_found")}</h2>
       <Link href="/#projects" scroll={true}>
-        {"<-"} Посмотреть варианты
+        {"<-"} {translate("view_options")}
       </Link>
     </>
   );

@@ -7,15 +7,16 @@ import styles from "@/styles/profilePhoto.module.css"
 interface ProfilePhotoProps {
   photo: ProfilePhotoData
   height: number
+  alt: string
 }
 
-export function ProfilePhoto({ photo, height }: ProfilePhotoProps) {
+export function ProfilePhoto({ photo, height, alt }: ProfilePhotoProps) {
   return (
     <div className={styles.portrait}>
       <Image
         className={styles.photo}
         src={photo.src}
-        alt={photo.alt}
+        alt={alt}
         height={height}
         quality={100}
       />
