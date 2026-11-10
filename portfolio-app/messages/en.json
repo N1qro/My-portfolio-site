@@ -9,16 +9,13 @@
     "projects": "Projects",
     "achievements": "Achievements",
     "pictures": "Pictures",
-    "contact_me": "Contact me",
-    "switchToRussian": "Switch to Russian",
-    "switchToEnglish": "Switch to English"
+    "contact_me": "Contact me"
   },
   "footer": {
     "source_code": "Source code can be found on"
   },
   "home": {
     "location": "Innopolis, Russia",
-    "profilePhotoAlt": "Portrait of Andrei Novikov",
     "description": "Web developer, {age, plural, one {# year old} other {# years old}}. Student of Innopolis University, winner and prize-winner of Olympiads, creator of bots in Discord, interested in entrepreneurship",
     "projects": "My projects",
     "achievements": "Achievements",
@@ -34,8 +31,6 @@
   },
   "fact_card": {
     "fact_about_me": "Fact about me",
-    "previousFact": "Previous fact",
-    "nextFact": "Next fact",
     "of": "of"
   },
   "project_page": {

@@ -14,7 +14,7 @@ export default function GithubCard({ src }: CardProps) {
 
   return (
     <Link href={src} target="_blank" className={containerStyles.github_container}>
-      <Image height={40} src={githubImage} alt=""/>
+      <Image height={40} src={githubImage} alt="github-logo"/>
       <h4>{t("go_to_github")}</h4>
     </Link>
   )

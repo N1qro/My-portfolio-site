@@ -9,16 +9,13 @@
     "projects": "Проекты",
     "achievements": "Достижения",
     "pictures": "Фотографии",
-    "contact_me": "Связаться со мной",
-    "switchToRussian": "Переключить на русский",
-    "switchToEnglish": "Переключить на английский"
+    "contact_me": "Связаться со мной"
   },
   "footer": {
     "source_code": "Исходный код сайта можно найти на"
   },
   "home": {
     "location": "Иннополис, Россия",
-    "profilePhotoAlt": "Портрет Андрея Новикова",
     "description": "Веб разработчик, {age, plural, one {# год} few {# года} many {# лет} other {# года}}. Студент университета Иннополис, победитель и призёр олимпиад, создатель ботов в Discord, интересующийся предпренимательством",
     "projects": "Мои проекты",
     "achievements": "Достижения",
@@ -34,8 +31,6 @@
   },
   "fact_card": {
     "fact_about_me": "Факт обо мне",
-    "previousFact": "Предыдущий факт",
-    "nextFact": "Следующий факт",
     "of": "из"
   },
   "project_page": {

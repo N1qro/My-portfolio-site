@@ -14,7 +14,7 @@ function Header() {
     <header className={styles.header}>
       <RootContainer>
         <Link href="/" className={styles.header_title}>
-          <Image width={32} src={siteLogo} alt="" />
+          <Image width={32} src={siteLogo} alt="site-logo" />
           <h2>{siteTitle}</h2>
         </Link>
         <nav>
