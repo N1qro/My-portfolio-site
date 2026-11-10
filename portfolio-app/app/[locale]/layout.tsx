@@ -22,12 +22,12 @@ export async function generateMetadata({
   params: Promise<{locale: string}>
 }): Promise<Metadata> {
   const {locale} = await params
-  const translate = await getTranslations({ locale, namespace: "metadata" })
+  const translate = await getTranslations({ locale })
   const portfolioOwnerAge = await getPortfolioOwnerAge()
 
   return {
-    title: "Новиков Андрей",
-    description: translate("description", { age: portfolioOwnerAge }),
+    title: translate("author.fullname"),
+    description: translate("metadata.description", { age: portfolioOwnerAge }),
   }
 }
 
