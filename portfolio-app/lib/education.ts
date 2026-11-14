@@ -37,7 +37,7 @@ export function getEducationInfo(translate: ReturnType<typeof useTranslations>, 
       grade: "4.97/5",
       documents: [{
         href: locale === "en" ? "/docs/innopolis-transcript-en.pdf" : "/docs/innopolis-transcript-ru.pdf",
-        label: translate("education.innopolis.transcript"),
+        label: translate("education.transcript"),
         fileType: "PDF",
       }],
     },
