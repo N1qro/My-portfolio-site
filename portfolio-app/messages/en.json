@@ -146,6 +146,7 @@
     "china": "China",
     "innopolis": {
       "title": "Innopolis University",
+      "transcript": "Academic transcript",
       "studyType": "Bachelor's degree",
       "description": "Computer Science, Information Systems Engineering"
     },

@@ -24,7 +24,7 @@ export interface EducationEntryData {
   }[]
 }
 
-export function getEducationInfo(translate: ReturnType<typeof useTranslations>) {
+export function getEducationInfo(translate: ReturnType<typeof useTranslations>, locale: string) {
   return {
     innopolis: {
       id: "innopolis",
@@ -36,8 +36,8 @@ export function getEducationInfo(translate: ReturnType<typeof useTranslations>) 
       country: { name: translate("education.russia"), flag: russiaFlag },
       grade: "4.97/5",
       documents: [{
-        href: "/docs/bit-transcript.pdf",
-        label: translate("education.transcript"),
+        href: locale === "en" ? "/docs/innopolis-transcript-en.pdf" : "/docs/innopolis-transcript-ru.pdf",
+        label: translate("education.innopolis.transcript"),
         fileType: "PDF",
       }],
     },

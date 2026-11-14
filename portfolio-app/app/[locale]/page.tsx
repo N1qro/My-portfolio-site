@@ -39,7 +39,7 @@ export const instant = false
 export default async function Home() {
   const locale = await getLocale()
   const translate = await getTranslations()
-  const education = getEducationInfo(translate)
+  const education = getEducationInfo(translate, locale)
   const experience = getWorkInfo(translate)
   const cookieStore = await cookies();
   const savedFact = parseInt(cookieStore.get("latestFact")?.value || "0");
